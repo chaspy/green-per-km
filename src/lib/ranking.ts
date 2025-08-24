@@ -1,4 +1,4 @@
-import { Station, UnifiedStation, findCommonRoutes, segmentKmForRoute, segmentMinutesForRoute } from './distance';
+import { Station, UnifiedStation, OperatingSystemData, findCommonRoutes, segmentKmForRoute, segmentMinutesForRoute, findOperatingSystemRoutes } from './distance';
 import { calcGreenFare, Method } from './fare';
 
 export interface RankingItem {
@@ -64,7 +64,8 @@ export function generateUnifiedRankings(
   unifiedStations: UnifiedStation[],
   fareTable: { fareBands: Array<{ maxKm: number | null; suica: number; ticket: number }> },
   method: Method = 'suica',
-  routes?: string[]
+  routes?: string[],
+  operatingSystems?: OperatingSystemData
 ): RankingItem[] {
   const rankings: RankingItem[] = [];
   const bestRoutes = new Map<string, RankingItem>(); // 駅間で最短ルートのみ保持
@@ -113,6 +114,38 @@ export function generateUnifiedRankings(
           continue;
         }
       }
+      
+      // 運転系統での接続も確認
+      if (operatingSystems) {
+        const operatingConnections = findOperatingSystemRoutes(unifiedStations, operatingSystems, fromStation.name, toStation.name);
+        
+        for (const connection of operatingConnections) {
+          const distance = connection.totalKm;
+          const minutes = connection.totalMinutes;
+          
+          if (distance === 0 || minutes === 0) continue;
+          
+          const fare = calcGreenFare(distance, fareTable, method);
+          const unitPrice = fare / distance;
+          const minutePrice = fare / minutes;
+          
+          const currentItem: RankingItem = {
+            from: fromStation.name,
+            to: toStation.name,
+            distance,
+            minutes,
+            fare,
+            unitPrice,
+            minutePrice
+          };
+          
+          // 同じ駅間では最短距離のルートのみ採用
+          const existing = bestRoutes.get(stationPairKey);
+          if (!existing || distance < existing.distance) {
+            bestRoutes.set(stationPairKey, currentItem);
+          }
+        }
+      }
     }
   }
   
@@ -127,9 +160,10 @@ export function generateUnifiedMinuteRankings(
   unifiedStations: UnifiedStation[],
   fareTable: { fareBands: Array<{ maxKm: number | null; suica: number; ticket: number }> },
   method: Method = 'suica',
-  routes?: string[]
+  routes?: string[],
+  operatingSystems?: OperatingSystemData
 ): RankingItem[] {
-  const rankings = generateUnifiedRankings(unifiedStations, fareTable, method, routes);
+  const rankings = generateUnifiedRankings(unifiedStations, fareTable, method, routes, operatingSystems);
   // 分単価でソート（高い順）
   return [...rankings].sort((a, b) => b.minutePrice - a.minutePrice);
 }

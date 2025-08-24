@@ -22,6 +22,33 @@ export type UnifiedStationData = {
   stations: UnifiedStation[];
 };
 
+export type OperatingConnection = {
+  fromStation: string;
+  toStation: string;
+  totalKm: number;
+  totalMinutes: number;
+  routeSegments: Array<{
+    route: string;
+    from: string;
+    to: string;
+    km: number;
+    minutes: number;
+  }>;
+};
+
+export type OperatingSystem = {
+  id: string;
+  titleJa: string;
+  description: string;
+  physicalRoutes: string[];
+  operatingConnections: OperatingConnection[];
+};
+
+export type OperatingSystemData = {
+  lastUpdated: string;
+  operatingSystems: { [key: string]: OperatingSystem };
+};
+
 export function segmentKm(stations: Station[], from: string, to: string): number {
   const i = stations.findIndex(s => s.name === from);
   const j = stations.findIndex(s => s.name === to);
@@ -103,4 +130,66 @@ export function getCompatibleStations(unifiedStations: UnifiedStation[], selecte
   return unifiedStations.filter(station => 
     station.lines.some(line => selectedRoutes.has(line.route))
   );
+}
+
+export function findOperatingSystemRoutes(
+  _unifiedStations: UnifiedStation[],
+  operatingSystems: OperatingSystemData,
+  fromName: string,
+  toName: string
+): OperatingConnection[] {
+  const connections: OperatingConnection[] = [];
+  
+  for (const system of Object.values(operatingSystems.operatingSystems)) {
+    for (const connection of system.operatingConnections) {
+      if (connection.fromStation === fromName && connection.toStation === toName) {
+        connections.push(connection);
+      }
+      if (connection.fromStation === toName && connection.toStation === fromName) {
+        const reversedConnection: OperatingConnection = {
+          fromStation: toName,
+          toStation: fromName,
+          totalKm: connection.totalKm,
+          totalMinutes: connection.totalMinutes,
+          routeSegments: [...connection.routeSegments].reverse().map(segment => ({
+            route: segment.route,
+            from: segment.to,
+            to: segment.from,
+            km: segment.km,
+            minutes: segment.minutes
+          }))
+        };
+        connections.push(reversedConnection);
+      }
+    }
+  }
+  
+  return connections;
+}
+
+export function getCompatibleStationsWithOperatingSystems(
+  unifiedStations: UnifiedStation[],
+  operatingSystems: OperatingSystemData,
+  selectedStationName: string
+): UnifiedStation[] {
+  const physicalCompatible = getCompatibleStations(unifiedStations, selectedStationName);
+  const operatingCompatible = new Set<string>();
+  
+  for (const system of Object.values(operatingSystems.operatingSystems)) {
+    for (const connection of system.operatingConnections) {
+      if (connection.fromStation === selectedStationName) {
+        operatingCompatible.add(connection.toStation);
+      }
+      if (connection.toStation === selectedStationName) {
+        operatingCompatible.add(connection.fromStation);
+      }
+    }
+  }
+  
+  const allCompatibleNames = new Set([
+    ...physicalCompatible.map(s => s.name),
+    ...operatingCompatible
+  ]);
+  
+  return unifiedStations.filter(station => allCompatibleNames.has(station.name));
 }

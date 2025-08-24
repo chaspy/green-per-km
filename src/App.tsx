@@ -5,8 +5,10 @@ import {
   segmentMinutesForRoute, 
   UnifiedStation, 
   UnifiedStationData, 
+  OperatingSystemData,
   findCommonRoutes,
-  getCompatibleStations
+  findOperatingSystemRoutes,
+  getCompatibleStationsWithOperatingSystems
 } from './lib/distance';
 import { StationSearch } from './components/StationSearch';
 import { generateUnifiedRankings, generateUnifiedMinuteRankings } from './lib/ranking';
@@ -21,6 +23,7 @@ type FareTable = {
 function App() {
   const [unifiedData, setUnifiedData] = useState<UnifiedStationData | null>(null);
   const [fareTable, setFareTable] = useState<FareTable | null>(null);
+  const [operatingSystemsData, setOperatingSystemsData] = useState<OperatingSystemData | null>(null);
   const [fromStation, setFromStation] = useState<string>('');
   const [toStation, setToStation] = useState<string>('');
   const [loading, setLoading] = useState(true);
@@ -28,10 +31,12 @@ function App() {
   useEffect(() => {
     Promise.all([
       fetch('/data/stations-unified.json').then(res => res.json()),
-      fetch('/data/green-fare.table.json').then(res => res.json())
-    ]).then(([unified, fare]) => {
+      fetch('/data/green-fare.table.json').then(res => res.json()),
+      fetch('/data/operating-systems.json').then(res => res.json())
+    ]).then(([unified, fare, operatingSystems]) => {
       setUnifiedData(unified);
       setFareTable(fare);
+      setOperatingSystemsData(operatingSystems);
       // デフォルトで東京駅から始まる
       setFromStation('東京');
       setLoading(false);
@@ -41,44 +46,54 @@ function App() {
     });
   }, []);
 
-  // From駅変更時にTo駅が互換性がない場合はクリア（常に実行）
+  // From駅変更時にTo駅が互換性がない場合はクリア（運転系統含む）
   useEffect(() => {
-    if (unifiedData && fromStation && toStation) {
-      const compatible = getCompatibleStations(unifiedData.stations, fromStation);
+    if (unifiedData && operatingSystemsData && fromStation && toStation) {
+      const compatible = getCompatibleStationsWithOperatingSystems(unifiedData.stations, operatingSystemsData, fromStation);
       const isCompatible = compatible.some(station => station.name === toStation);
       if (!isCompatible) {
         setToStation('');
       }
     }
-  }, [fromStation, toStation, unifiedData]);
+  }, [fromStation, toStation, unifiedData, operatingSystemsData]);
 
   if (loading) return <div>Loading...</div>;
-  if (!unifiedData || !fareTable) return <div>Failed to load data</div>;
+  if (!unifiedData || !fareTable || !operatingSystemsData) return <div>Failed to load data</div>;
 
-  // 選択された駅間の共通路線を取得
+  // 選択された駅間の利用可能ルートを取得（物理路線 + 運転系統）
   const commonRoutes = fromStation && toStation
     ? findCommonRoutes(unifiedData.stations, fromStation, toStation)
     : [];
 
-  // デフォルトで最初の共通路線を使用
+  const operatingConnections = fromStation && toStation
+    ? findOperatingSystemRoutes(unifiedData.stations, operatingSystemsData, fromStation, toStation)
+    : [];
+
+  // 利用可能なルートを優先順で選択：1) 物理路線 2) 運転系統
   const selectedRoute = commonRoutes.length > 0 ? commonRoutes[0] : null;
+  const selectedOperatingConnection = operatingConnections.length > 0 ? operatingConnections[0] : null;
 
   // ランキング表示用：駅選択時は該当路線のみ、デフォルトは全路線
   const rankingRoutes = fromStation && toStation && commonRoutes.length > 0 
     ? commonRoutes 
     : undefined;  // undefinedで全路線を表示
 
-  // To駅の選択肢をFrom駅と互換性のある駅に制限
+  // To駅の選択肢をFrom駅と互換性のある駅に制限（運転系統含む）
   const compatibleToStations = fromStation 
-    ? getCompatibleStations(unifiedData.stations, fromStation)
+    ? getCompatibleStationsWithOperatingSystems(unifiedData.stations, operatingSystemsData, fromStation)
     : undefined;
 
-  const distance = fromStation && toStation && selectedRoute
-    ? segmentKmForRoute(unifiedData.stations, fromStation, toStation, selectedRoute)
+  // 距離・時間計算：物理路線優先、なければ運転系統を使用
+  const distance = fromStation && toStation
+    ? selectedRoute
+      ? segmentKmForRoute(unifiedData.stations, fromStation, toStation, selectedRoute)
+      : selectedOperatingConnection?.totalKm || 0
     : 0;
   
-  const minutes = fromStation && toStation && selectedRoute
-    ? segmentMinutesForRoute(unifiedData.stations, fromStation, toStation, selectedRoute)
+  const minutes = fromStation && toStation
+    ? selectedRoute
+      ? segmentMinutesForRoute(unifiedData.stations, fromStation, toStation, selectedRoute)
+      : selectedOperatingConnection?.totalMinutes || 0
     : 0;
 
   const suicaFare = distance > 0 ? calcGreenFare(distance, fareTable, 'suica') : 0;
@@ -96,18 +111,44 @@ function App() {
     'yokosuka-line': '横須賀線（東京〜久里浜）',
   };
 
+  // 運転系統の表示用マッピング
+  const operatingSystemTitles: { [key: string]: string } = {
+    'ueno-tokyo-line': '上野東京ライン（直通運転）',
+    'shonan-shinjuku-line-direct': '湘南新宿ライン（直通運転）',
+  };
+
   return (
     <div className="container">
       <h1>グリーン料金計算機</h1>
       <p className="supported-routes">
         対応路線: {Object.values(routeTitles).join('、')}
       </p>
-      {selectedRoute && (
+      {(selectedRoute || selectedOperatingConnection) && (
         <p className="subtitle">
-          {routeTitles[selectedRoute] || selectedRoute}
-          {commonRoutes.length > 1 && (
-            <span className="route-info"> (他{commonRoutes.length - 1}路線対応)</span>
-          )}
+          {selectedRoute ? (
+            <>
+              {routeTitles[selectedRoute] || selectedRoute}
+              {commonRoutes.length > 1 && (
+                <span className="route-info"> (他{commonRoutes.length - 1}路線対応)</span>
+              )}
+            </>
+          ) : selectedOperatingConnection ? (
+            <>
+              {selectedOperatingConnection.routeSegments.map((segment, index) => {
+                const systemId = Object.values(operatingSystemsData.operatingSystems).find(system =>
+                  system.operatingConnections.some(conn => 
+                    conn.routeSegments.some(seg => seg.route === segment.route)
+                  )
+                )?.id;
+                const systemTitle = systemId ? operatingSystemTitles[systemId] : '直通運転';
+                return index === 0 ? systemTitle : null;
+              })[0]}
+              <span className="route-info"> (乗り換えなし直通)</span>
+              {operatingConnections.length > 1 && (
+                <span className="route-info"> (他{operatingConnections.length - 1}系統対応)</span>
+              )}
+            </>
+          ) : null}
         </p>
       )}
 
@@ -151,6 +192,21 @@ function App() {
             </div>
           </div>
 
+          {selectedOperatingConnection && (
+            <div className="route-details">
+              <h3>🚄 ルート詳細（直通運転）</h3>
+              <div className="route-segments">
+                {selectedOperatingConnection.routeSegments.map((segment, index) => (
+                  <div key={index} className="route-segment">
+                    <span className="segment-route">{routeTitles[segment.route] || segment.route}</span>
+                    <span className="segment-path">{segment.from} → {segment.to}</span>
+                    <span className="segment-stats">{segment.km}km・{segment.minutes}分</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <div className="fare-display">
             <div className="fare-card-single">
               <h3>Suicaグリーン券</h3>
@@ -175,6 +231,7 @@ function App() {
         unifiedStations={unifiedData.stations}
         fareTable={fareTable}
         availableRoutes={rankingRoutes}
+        operatingSystemsData={operatingSystemsData}
       />
 
       <footer className="footer">
@@ -221,6 +278,70 @@ function App() {
             </details>
           </div>
         </div>
+
+        <details className="technical-specs" style={{marginTop: '2rem', padding: '1rem', backgroundColor: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '4px'}}>
+          <summary style={{cursor: 'pointer', fontWeight: 'bold', marginBottom: '1rem'}}>🔧 システム詳細仕様・データ解釈</summary>
+          <div style={{fontSize: '0.85em', lineHeight: '1.6', color: '#495057'}}>
+            
+            <h5>📊 データベース構成（2025年8月現在）</h5>
+            <ul>
+              <li><strong>対応路線</strong>: 7路線・136駅</li>
+              <li><strong>データ形式</strong>: 統合駅データベース + 個別路線ファイル</li>
+              <li><strong>料金体系</strong>: JR東日本Suicaグリーン車料金（50km/100km境界）</li>
+            </ul>
+
+            <h5>🚃 路線データの解釈方法</h5>
+            <ul>
+              <li><strong>営業キロ</strong>: 各路線の起点駅（主に東京駅）からの累積距離</li>
+              <li><strong>所要時間</strong>: 普通列車基準の概算値（快速・特急除く）</li>
+              <li><strong>共有区間</strong>: 
+                <ul>
+                  <li>宇都宮線・高崎線: 東京〜大宮間は東北本線を共有</li>
+                  <li>横須賀線: 東京〜大船間は品鶴線経由（東海道線とは別ルート）</li>
+                  <li>湘南新宿ライン: 複数路線の直通運転系統</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h5>⚠️ データ制限・推定値について</h5>
+            <ul>
+              <li><strong>編集・推定データ</strong>: 公式データが不完全な部分は合理的推定で補完</li>
+              <li><strong>グリーン車運行制限</strong>:
+                <ul>
+                  <li>常磐線: 東京〜土浦間で確実、土浦以北は朝夕限定</li>
+                  <li>高崎線: 全区間対応（一部列車除く）</li>
+                  <li>横須賀線: 全区間対応</li>
+                </ul>
+              </li>
+              <li><strong>時刻表確認推奨</strong>: 実際の乗車時は最新時刻表で運行確認要</li>
+            </ul>
+
+            <h5>🔄 システム設計上の制限</h5>
+            <ul>
+              <li><strong>跨線ルート未対応</strong>: 現在は路線別独立データのため、実際の直通運転（恵比寿→久喜、熱海→宇都宮等）が選択不可</li>
+              <li><strong>将来対応予定</strong>: 上野東京ライン・湘南新宿ライン等の運転系統データ追加</li>
+              <li><strong>ランキング算出</strong>: 同一駅間で複数路線がある場合は最短距離ルートを採用</li>
+            </ul>
+
+            <h5>📚 データソースの信頼性</h5>
+            <ul>
+              <li><strong>高信頼</strong>: JR東日本公式料金表、Wikipedia基礎データ</li>
+              <li><strong>中信頼</strong>: 複数鉄道情報サイトからの営業キロ</li>
+              <li><strong>推定値</strong>: 駅間距離の線形補間、所要時間の速度ベース算出</li>
+            </ul>
+
+            <h5>🛠️ 技術仕様</h5>
+            <ul>
+              <li><strong>フロントエンド</strong>: React 18 + TypeScript + Vite</li>
+              <li><strong>検索機能</strong>: Fuse.js（日本語・ひらがな・ローマ字対応）</li>
+              <li><strong>デプロイ</strong>: Cloudflare Pages（自動デプロイ）</li>
+              <li><strong>データ更新</strong>: GitHub Actions（料金表自動取得）</li>
+            </ul>
+
+            <p><small>このシステムは鉄道愛好家の利便性向上を目的とし、JR東日本の公式情報を最大限尊重しつつ、技術的制約内で最適な体験を提供します。</small></p>
+          </div>
+        </details>
+
       </footer>
     </div>
   );
@@ -229,22 +350,24 @@ function App() {
 function RankingSection({ 
   unifiedStations, 
   fareTable, 
-  availableRoutes 
+  availableRoutes,
+  operatingSystemsData
 }: { 
   unifiedStations: UnifiedStation[], 
   fareTable: FareTable,
-  availableRoutes?: string[]
+  availableRoutes?: string[],
+  operatingSystemsData: OperatingSystemData
 }) {
   const [filterStation, setFilterStation] = useState<string>('');
   
   const allRankings = useMemo(
-    () => generateUnifiedRankings(unifiedStations, fareTable, 'suica', availableRoutes),
-    [unifiedStations, fareTable, availableRoutes]
+    () => generateUnifiedRankings(unifiedStations, fareTable, 'suica', availableRoutes, operatingSystemsData),
+    [unifiedStations, fareTable, availableRoutes, operatingSystemsData]
   );
   
   const minuteRankings = useMemo(
-    () => generateUnifiedMinuteRankings(unifiedStations, fareTable, 'suica', availableRoutes),
-    [unifiedStations, fareTable, availableRoutes]
+    () => generateUnifiedMinuteRankings(unifiedStations, fareTable, 'suica', availableRoutes, operatingSystemsData),
+    [unifiedStations, fareTable, availableRoutes, operatingSystemsData]
   );
   
   // フィルタリング

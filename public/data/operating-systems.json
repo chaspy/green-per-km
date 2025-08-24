@@ -1,0 +1,190 @@
+{
+  "lastUpdated": "2025-08-24T12:30:00Z",
+  "operatingSystems": {
+    "ueno-tokyo-line": {
+      "id": "ueno-tokyo-line",
+      "titleJa": "上野東京ライン",
+      "description": "宇都宮・高崎・常磐線 ⟷ 東海道線の直通運転",
+      "physicalRoutes": ["joban-line", "utsunomiya-line", "takasaki-line", "tokaido-line"],
+      "operatingConnections": [
+        {
+          "fromStation": "熱海",
+          "toStation": "宇都宮",
+          "totalKm": 214.1,
+          "totalMinutes": 223,
+          "routeSegments": [
+            {"route": "tokaido-line", "from": "熱海", "to": "東京", "km": 104.6, "minutes": 98},
+            {"route": "utsunomiya-line", "from": "東京", "to": "宇都宮", "km": 109.5, "minutes": 125}
+          ]
+        },
+        {
+          "fromStation": "熱海",
+          "toStation": "高崎",
+          "totalKm": 209.8,
+          "totalMinutes": 212,
+          "routeSegments": [
+            {"route": "tokaido-line", "from": "熱海", "to": "東京", "km": 104.6, "minutes": 98},
+            {"route": "takasaki-line", "from": "東京", "to": "高崎", "km": 105.2, "minutes": 114}
+          ]
+        },
+        {
+          "fromStation": "熱海",
+          "toStation": "水戸",
+          "totalKm": 233.5,
+          "totalMinutes": 277,
+          "routeSegments": [
+            {"route": "tokaido-line", "from": "熱海", "to": "東京", "km": 104.6, "minutes": 98},
+            {"route": "joban-line", "from": "東京", "to": "水戸", "km": 128.9, "minutes": 179}
+          ]
+        },
+        {
+          "fromStation": "小田原",
+          "toStation": "宇都宮",
+          "totalKm": 193.4,
+          "totalMinutes": 202,
+          "routeSegments": [
+            {"route": "tokaido-line", "from": "小田原", "to": "東京", "km": 83.9, "minutes": 77},
+            {"route": "utsunomiya-line", "from": "東京", "to": "宇都宮", "km": 109.5, "minutes": 125}
+          ]
+        },
+        {
+          "fromStation": "小田原",
+          "toStation": "高崎",
+          "totalKm": 189.1,
+          "totalMinutes": 191,
+          "routeSegments": [
+            {"route": "tokaido-line", "from": "小田原", "to": "東京", "km": 83.9, "minutes": 77},
+            {"route": "takasaki-line", "from": "東京", "to": "高崎", "km": 105.2, "minutes": 114}
+          ]
+        },
+        {
+          "fromStation": "品川",
+          "toStation": "宇都宮",
+          "totalKm": 116.3,
+          "totalMinutes": 135,
+          "routeSegments": [
+            {"route": "tokaido-line", "from": "品川", "to": "東京", "km": 6.8, "minutes": 10},
+            {"route": "utsunomiya-line", "from": "東京", "to": "宇都宮", "km": 109.5, "minutes": 125}
+          ]
+        },
+        {
+          "fromStation": "品川",
+          "toStation": "高崎",
+          "totalKm": 112.0,
+          "totalMinutes": 124,
+          "routeSegments": [
+            {"route": "tokaido-line", "from": "品川", "to": "東京", "km": 6.8, "minutes": 10},
+            {"route": "takasaki-line", "from": "東京", "to": "高崎", "km": 105.2, "minutes": 114}
+          ]
+        },
+        {
+          "fromStation": "品川",
+          "toStation": "水戸",
+          "totalKm": 135.7,
+          "totalMinutes": 189,
+          "routeSegments": [
+            {"route": "tokaido-line", "from": "品川", "to": "東京", "km": 6.8, "minutes": 10},
+            {"route": "joban-line", "from": "東京", "to": "水戸", "km": 128.9, "minutes": 179}
+          ]
+        },
+        {
+          "fromStation": "宇都宮",
+          "toStation": "熱海",
+          "totalKm": 214.1,
+          "totalMinutes": 223,
+          "routeSegments": [
+            {"route": "utsunomiya-line", "from": "宇都宮", "to": "東京", "km": 109.5, "minutes": 125},
+            {"route": "tokaido-line", "from": "東京", "to": "熱海", "km": 104.6, "minutes": 98}
+          ]
+        },
+        {
+          "fromStation": "高崎",
+          "toStation": "熱海",
+          "totalKm": 209.8,
+          "totalMinutes": 212,
+          "routeSegments": [
+            {"route": "takasaki-line", "from": "高崎", "to": "東京", "km": 105.2, "minutes": 114},
+            {"route": "tokaido-line", "from": "東京", "to": "熱海", "km": 104.6, "minutes": 98}
+          ]
+        },
+        {
+          "fromStation": "水戸",
+          "toStation": "熱海",
+          "totalKm": 233.5,
+          "totalMinutes": 277,
+          "routeSegments": [
+            {"route": "joban-line", "from": "水戸", "to": "東京", "km": 128.9, "minutes": 179},
+            {"route": "tokaido-line", "from": "東京", "to": "熱海", "km": 104.6, "minutes": 98}
+          ]
+        }
+      ]
+    },
+    "shonan-shinjuku-line-direct": {
+      "id": "shonan-shinjuku-line-direct", 
+      "titleJa": "湘南新宿ライン（直通運転）",
+      "description": "宇都宮・高崎線 ⟷ 東海道・横須賀線の直通運転",
+      "physicalRoutes": ["utsunomiya-line", "takasaki-line", "tokaido-line", "yokosuka-line", "shonan-shinjuku-line"],
+      "operatingConnections": [
+        {
+          "fromStation": "恵比寿",
+          "toStation": "久喜",
+          "totalKm": 58.9,
+          "totalMinutes": 76,
+          "routeSegments": [
+            {"route": "shonan-shinjuku-line", "from": "恵比寿", "to": "大宮", "km": 26.0, "minutes": 26},
+            {"route": "utsunomiya-line", "from": "大宮", "to": "久喜", "km": 21.2, "minutes": 23}
+          ]
+        },
+        {
+          "fromStation": "恵比寿",
+          "toStation": "宇都宮",
+          "totalKm": 135.5,
+          "totalMinutes": 151,
+          "routeSegments": [
+            {"route": "shonan-shinjuku-line", "from": "恵比寿", "to": "大宮", "km": 26.0, "minutes": 26},
+            {"route": "utsunomiya-line", "from": "大宮", "to": "宇都宮", "km": 87.8, "minutes": 93}
+          ]
+        },
+        {
+          "fromStation": "恵比寿",
+          "toStation": "高崎",
+          "totalKm": 131.2,
+          "totalMinutes": 140,
+          "routeSegments": [
+            {"route": "shonan-shinjuku-line", "from": "恵比寿", "to": "大宮", "km": 26.0, "minutes": 26},
+            {"route": "takasaki-line", "from": "大宮", "to": "高崎", "km": 74.9, "minutes": 82}
+          ]
+        },
+        {
+          "fromStation": "渋谷",
+          "toStation": "宇都宮",
+          "totalKm": 139.5,
+          "totalMinutes": 151,
+          "routeSegments": [
+            {"route": "shonan-shinjuku-line", "from": "渋谷", "to": "大宮", "km": 23.0, "minutes": 23},
+            {"route": "utsunomiya-line", "from": "大宮", "to": "宇都宮", "km": 87.8, "minutes": 93}
+          ]
+        },
+        {
+          "fromStation": "新宿",
+          "toStation": "小田原",
+          "totalKm": 80.0,
+          "totalMinutes": 75,
+          "routeSegments": [
+            {"route": "shonan-shinjuku-line", "from": "新宿", "to": "小田原", "km": 80.0, "minutes": 75}
+          ]
+        },
+        {
+          "fromStation": "池袋",
+          "toStation": "逗子",
+          "totalKm": 59.0,
+          "totalMinutes": 68,
+          "routeSegments": [
+            {"route": "shonan-shinjuku-line", "from": "池袋", "to": "戸塚", "km": 34.0, "minutes": 34},
+            {"route": "yokosuka-line", "from": "戸塚", "to": "逗子", "km": 15.6, "minutes": 19}
+          ]
+        }
+      ]
+    }
+  }
+}
