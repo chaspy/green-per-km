@@ -26,7 +26,9 @@
     { "name": "熱海", "hiragana": "あたみ", "romaji": "atami", "km": 104.6, "minutes": 98 }
   ],
   "sources": [
-    {"note":"JR東日本公式 - 普通列車グリーン車対象駅","url":"https://www.jreast.co.jp/railway/train/green/"},
-    {"note":"営業キロ・所要時間は概算値です。正確な情報は時刻表をご確認ください","url":"#"}
+    {"note":"ℹ️ このデータは編集・推定です。実際のグリーン車停車は時刻表でご確認ください","url":"#"},
+    {"note":"駅間距離参考: Wikipedia","url":"https://ja.wikipedia.org/wiki/東海道本線"},
+    {"note":"東海道線時刻表（JR東日本）","url":"https://www.jreast-timetable.jp/timetable/list/0001.html"},
+    {"note":"デバッグ用: このJSONファイル（GitHub）","url":"https://github.com/chaspy/green-per-km/blob/main/public/data/routes/tokaido-line.km.json"}
   ]
 }

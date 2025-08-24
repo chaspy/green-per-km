@@ -1,0 +1,43 @@
+{
+  "route": "shonan-shinjuku-line",
+  "titleJa": "湘南新宿ライン（宇都宮・高崎〜新宿〜小田原・逗子）",
+  "unit": "km_from_shinjuku",
+  "stations": [
+    { "name": "宇都宮", "hiragana": "うつのみや", "romaji": "utsunomiya", "km": 100.0, "minutes": 100 },
+    { "name": "石橋", "hiragana": "いしばし", "romaji": "ishibashi", "km": 85.0, "minutes": 85 },
+    { "name": "小金井", "hiragana": "こがねい", "romaji": "koganei-uts", "km": 75.0, "minutes": 75 },
+    { "name": "小山", "hiragana": "おやま", "romaji": "oyama", "km": 65.0, "minutes": 65 },
+    { "name": "久喜", "hiragana": "くき", "romaji": "kuki", "km": 50.0, "minutes": 50 },
+    { "name": "東大宮", "hiragana": "ひがしおおみや", "romaji": "higashiomiya", "km": 35.0, "minutes": 35 },
+    { "name": "大宮", "hiragana": "おおみや", "romaji": "omiya", "km": 30.0, "minutes": 30 },
+    { "name": "浦和", "hiragana": "うらわ", "romaji": "urawa", "km": 23.0, "minutes": 23 },
+    { "name": "赤羽", "hiragana": "あかばね", "romaji": "akabane", "km": 18.0, "minutes": 18 },
+    { "name": "板橋", "hiragana": "いたばし", "romaji": "itabashi", "km": 13.0, "minutes": 13 },
+    { "name": "池袋", "hiragana": "いけぶくろ", "romaji": "ikebukuro", "km": 7.0, "minutes": 7 },
+    { "name": "新宿", "hiragana": "しんじゅく", "romaji": "shinjuku", "km": 0.0, "minutes": 0 },
+    { "name": "恵比寿", "hiragana": "えびす", "romaji": "ebisu", "km": 4.0, "minutes": 4 },
+    { "name": "渋谷", "hiragana": "しぶや", "romaji": "shibuya", "km": 7.0, "minutes": 7 },
+    { "name": "大崎", "hiragana": "おおさき", "romaji": "osaki", "km": 11.0, "minutes": 11 },
+    { "name": "西大井", "hiragana": "にしおおい", "romaji": "nishioi", "km": 15.0, "minutes": 15 },
+    { "name": "武蔵小杉", "hiragana": "むさしこすぎ", "romaji": "musashikosugi", "km": 20.0, "minutes": 20 },
+    { "name": "新川崎", "hiragana": "しんかわさき", "romaji": "shinkawasaki", "km": 25.0, "minutes": 25 },
+    { "name": "横浜", "hiragana": "よこはま", "romaji": "yokohama", "km": 30.0, "minutes": 30 },
+    { "name": "保土ケ谷", "hiragana": "ほどがや", "romaji": "hodogaya", "km": 34.0, "minutes": 34 },
+    { "name": "東戸塚", "hiragana": "ひがしとつか", "romaji": "higashitotsuka", "km": 38.0, "minutes": 38 },
+    { "name": "戸塚", "hiragana": "とつか", "romaji": "totsuka", "km": 41.0, "minutes": 41 },
+    { "name": "大船", "hiragana": "おおふな", "romaji": "ofuna", "km": 47.0, "minutes": 47 },
+    { "name": "藤沢", "hiragana": "ふじさわ", "romaji": "fujisawa", "km": 52.0, "minutes": 52 },
+    { "name": "辻堂", "hiragana": "つじどう", "romaji": "tsujido", "km": 55.0, "minutes": 55 },
+    { "name": "茅ヶ崎", "hiragana": "ちがさき", "romaji": "chigasaki", "km": 58.0, "minutes": 58 },
+    { "name": "平塚", "hiragana": "ひらつか", "romaji": "hiratsuka", "km": 65.0, "minutes": 65 },
+    { "name": "国府津", "hiragana": "こうづ", "romaji": "kozu", "km": 72.0, "minutes": 72 },
+    { "name": "小田原", "hiragana": "おだわら", "romaji": "odawara", "km": 80.0, "minutes": 75 }
+  ],
+  "sources": [
+    {"note":"ℹ️ このデータは編集・推定です。実際のグリーン車停車は時刻表でご確認ください","url":"#"},
+    {"note":"距離は新宿駅を起点（0.0km）とした概算値","url":"#"},
+    {"note":"駅間距離参考: Wikipedia","url":"https://ja.wikipedia.org/wiki/湘南新宿ライン"},
+    {"note":"湘南新宿ライン時刻表（JR東日本）","url":"https://www.jreast-timetable.jp/timetable/list/0046.html"},
+    {"note":"デバッグ用: このJSONファイル（GitHub）","url":"https://github.com/chaspy/green-per-km/blob/main/public/data/routes/shonan-shinjuku-line.km.json"}
+  ]
+}

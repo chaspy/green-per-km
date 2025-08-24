@@ -29,8 +29,10 @@
     { "name": "高尾", "hiragana": "たかお", "romaji": "takao", "km": 53.1, "minutes": 67 }
   ],
   "sources": [
-    {"note":"駅間距離一覧の参考（検証用）","url":"https://dash-dash-dash.jp/archives/58434.html"},
-    {"note":"駅別『起点から』距離の参考（検証用）","url":"https://www.mds.gr.jp/~jp3nfp/station/list/jr/chuou.html"},
-    {"note":"所要時間は概算値です。正確な時刻は時刻表をご確認ください","url":"#"}
+    {"note":"ℹ️ このデータは編集・推定です。実際のグリーン車停車は時刻表でご確認ください","url":"#"},
+    {"note":"駅間距離参考: dash-dash-dash.jp","url":"https://dash-dash-dash.jp/archives/58434.html"},
+    {"note":"駅別距離参考: mds.gr.jp","url":"https://www.mds.gr.jp/~jp3nfp/station/list/jr/chuou.html"},
+    {"note":"中央線快速時刻表（JR東日本）","url":"https://www.jreast-timetable.jp/timetable/list/0005.html"},
+    {"note":"デバッグ用: このJSONファイル（GitHub）","url":"https://github.com/chaspy/green-per-km/blob/main/public/data/routes/chuo-rapid.km.json"}
   ]
 }

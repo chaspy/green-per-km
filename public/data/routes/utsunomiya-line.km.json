@@ -5,11 +5,17 @@
   "stations": [
     { "name": "東京", "hiragana": "とうきょう", "romaji": "tokyo", "km": 0.0, "minutes": 0 },
     { "name": "上野", "hiragana": "うえの", "romaji": "ueno", "km": 3.6, "minutes": 6 },
+    { "name": "尾久", "hiragana": "おく", "romaji": "oku", "km": 5.8, "minutes": 9 },
     { "name": "赤羽", "hiragana": "あかばね", "romaji": "akabane", "km": 7.8, "minutes": 12 },
     { "name": "浦和", "hiragana": "うらわ", "romaji": "urawa", "km": 16.3, "minutes": 25 },
+    { "name": "さいたま新都心", "hiragana": "さいたましんとしん", "romaji": "saitama-shintoshin", "km": 18.8, "minutes": 28 },
     { "name": "大宮", "hiragana": "おおみや", "romaji": "omiya", "km": 21.7, "minutes": 32 },
+    { "name": "土呂", "hiragana": "とろ", "romaji": "toro", "km": 24.1, "minutes": 35 },
+    { "name": "東大宮", "hiragana": "ひがしおおみや", "romaji": "higashiomiya", "km": 26.8, "minutes": 38 },
     { "name": "蓮田", "hiragana": "はすだ", "romaji": "hasuda", "km": 30.7, "minutes": 42 },
+    { "name": "新白岡", "hiragana": "しんしらおか", "romaji": "shin-shiraoka", "km": 32.8, "minutes": 44 },
     { "name": "白岡", "hiragana": "しらおか", "romaji": "shiraoka", "km": 35.3, "minutes": 47 },
+    { "name": "東鷲宮", "hiragana": "ひがしわしのみや", "romaji": "higashi-washinomiya", "km": 39.1, "minutes": 51 },
     { "name": "久喜", "hiragana": "くき", "romaji": "kuki", "km": 42.9, "minutes": 55 },
     { "name": "栗橋", "hiragana": "くりはし", "romaji": "kurihashi", "km": 52.7, "minutes": 65 },
     { "name": "古河", "hiragana": "こが", "romaji": "koga", "km": 59.9, "minutes": 72 },
@@ -23,7 +29,9 @@
     { "name": "宇都宮", "hiragana": "うつのみや", "romaji": "utsunomiya", "km": 109.5, "minutes": 125 }
   ],
   "sources": [
-    {"note":"JR東日本公式 - 普通列車グリーン車対象駅","url":"https://www.jreast.co.jp/railway/train/green/"},
-    {"note":"営業キロ・所要時間は概算値です。正確な情報は時刻表をご確認ください","url":"#"}
+    {"note":"ℹ️ このデータは編集・推定です。実際のグリーン車停車は時刻表でご確認ください","url":"#"},
+    {"note":"駅間距離参考: Wikipedia","url":"https://ja.wikipedia.org/wiki/宇都宮線"},
+    {"note":"宇都宮線時刻表（JR東日本）","url":"https://www.jreast-timetable.jp/timetable/list/0044.html"},
+    {"note":"デバッグ用: このJSONファイル（GitHub）","url":"https://github.com/chaspy/green-per-km/blob/main/public/data/routes/utsunomiya-line.km.json"}
   ]
 }

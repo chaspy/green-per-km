@@ -67,7 +67,7 @@ export function generateUnifiedRankings(
   routes?: string[]
 ): RankingItem[] {
   const rankings: RankingItem[] = [];
-  const processedRoutes = new Set<string>();
+  const bestRoutes = new Map<string, RankingItem>(); // 駅間で最短ルートのみ保持
   
   // 全ての駅間の組み合わせを計算
   for (let i = 0; i < unifiedStations.length; i++) {
@@ -78,12 +78,9 @@ export function generateUnifiedRankings(
       const commonRoutes = findCommonRoutes(unifiedStations, fromStation.name, toStation.name);
       const routesToProcess = routes ? commonRoutes.filter(route => routes.includes(route)) : commonRoutes;
       
+      const stationPairKey = `${fromStation.name}-${toStation.name}`;
+      
       for (const route of routesToProcess) {
-        // 同一ルート上の同一駅間組み合わせは一度だけ処理
-        const routeKey = `${fromStation.name}-${toStation.name}-${route}`;
-        if (processedRoutes.has(routeKey)) continue;
-        processedRoutes.add(routeKey);
-        
         try {
           const distance = segmentKmForRoute(unifiedStations, fromStation.name, toStation.name, route);
           const minutes = segmentMinutesForRoute(unifiedStations, fromStation.name, toStation.name, route);
@@ -95,7 +92,7 @@ export function generateUnifiedRankings(
           const unitPrice = fare / distance;
           const minutePrice = fare / minutes;
           
-          rankings.push({
+          const currentItem: RankingItem = {
             from: fromStation.name,
             to: toStation.name,
             distance,
@@ -103,7 +100,14 @@ export function generateUnifiedRankings(
             fare,
             unitPrice,
             minutePrice
-          });
+          };
+          
+          // 同じ駅間では最短距離のルートのみ採用
+          const existing = bestRoutes.get(stationPairKey);
+          if (!existing || distance < existing.distance) {
+            bestRoutes.set(stationPairKey, currentItem);
+          }
+          
         } catch (error) {
           // 無効なルート組み合わせはスキップ
           continue;
@@ -111,6 +115,9 @@ export function generateUnifiedRankings(
       }
     }
   }
+  
+  // 最短ルートのみをランキングに追加
+  rankings.push(...bestRoutes.values());
   
   // 単価でソート（高い順）
   return rankings.sort((a, b) => b.unitPrice - a.unitPrice);

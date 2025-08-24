@@ -90,6 +90,7 @@ function App() {
     'chuo-rapid': '中央線快速（東京〜高尾）',
     'utsunomiya-line': '宇都宮線（東京〜宇都宮）',
     'tokaido-line': '東海道線（東京〜熱海）',
+    'shonan-shinjuku-line': '湘南新宿ライン（宇都宮・高崎〜小田原・逗子）',
   };
 
   return (
@@ -193,6 +194,30 @@ function App() {
           <p>最終更新: {new Date(unifiedData.lastUpdated).toLocaleDateString('ja-JP')}</p>
           <p>対応路線: {Object.values(routeTitles).join('、')}</p>
         </div>
+
+        <div className="footer-section">
+          <h4>🔍 生データ（デバッグ用）</h4>
+          <div style={{fontSize: '0.85em', lineHeight: '1.6'}}>
+            <p><a href="https://github.com/chaspy/green-per-km/blob/main/public/data/green-fare.table.json" target="_blank" rel="noopener noreferrer">グリーン車料金表 (JSON)</a></p>
+            <p><a href="https://github.com/chaspy/green-per-km/blob/main/public/data/stations-unified.json" target="_blank" rel="noopener noreferrer">統合駅データ (JSON)</a></p>
+            <details style={{marginTop: '8px'}}>
+              <summary style={{cursor: 'pointer', color: '#0066cc'}}>路線別データ ▼</summary>
+              <div style={{paddingLeft: '16px', marginTop: '4px'}}>
+                {Object.entries(routeTitles).map(([routeKey, routeTitle]) => (
+                  <p key={routeKey} style={{margin: '2px 0'}}>
+                    <a 
+                      href={`https://github.com/chaspy/green-per-km/blob/main/public/data/routes/${routeKey}.km.json`}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      {routeTitle}
+                    </a>
+                  </p>
+                ))}
+              </div>
+            </details>
+          </div>
+        </div>
       </footer>
     </div>
   );
@@ -235,7 +260,7 @@ function RankingSection({
   );
   
   const expensiveRankings = useMemo(
-    () => filteredRankings.slice(0, 30),
+    () => [...filteredRankings].sort((a, b) => b.unitPrice - a.unitPrice).slice(0, 30),
     [filteredRankings]
   );
   
@@ -245,7 +270,7 @@ function RankingSection({
   );
   
   const expensiveMinuteRankings = useMemo(
-    () => filteredMinuteRankings.slice(0, 30),
+    () => [...filteredMinuteRankings].sort((a, b) => b.minutePrice - a.minutePrice).slice(0, 30),
     [filteredMinuteRankings]
   );
   
@@ -307,7 +332,7 @@ function RankingSection({
             {expensiveRankings.map((item, index) => {
               const route = formatRoute(item.from, item.to);
               return (
-                <li key={`exp-${item.from}-${item.to}`} className="ranking-item">
+                <li key={`exp-${index}-${route.from}-${route.to}`} className="ranking-item">
                   <div className={`ranking-position ${getPositionClass(index)}`}>
                     {index + 1}
                   </div>
@@ -333,7 +358,7 @@ function RankingSection({
             {cheapRankings.map((item, index) => {
               const route = formatRoute(item.from, item.to);
               return (
-                <li key={`cheap-${item.from}-${item.to}`} className="ranking-item">
+                <li key={`cheap-${index}-${route.from}-${route.to}`} className="ranking-item">
                   <div className={`ranking-position ${getPositionClass(index)}`}>
                     {index + 1}
                   </div>
@@ -365,7 +390,7 @@ function RankingSection({
               {expensiveMinuteRankings.map((item, index) => {
                 const route = formatRoute(item.from, item.to);
                 return (
-                  <li key={`exp-min-${item.from}-${item.to}`} className="ranking-item">
+                  <li key={`exp-min-${index}-${route.from}-${route.to}`} className="ranking-item">
                     <div className={`ranking-position ${getPositionClass(index)}`}>
                       {index + 1}
                     </div>
@@ -391,7 +416,7 @@ function RankingSection({
               {cheapMinuteRankings.map((item, index) => {
                 const route = formatRoute(item.from, item.to);
                 return (
-                  <li key={`cheap-min-${item.from}-${item.to}`} className="ranking-item">
+                  <li key={`cheap-min-${index}-${route.from}-${route.to}`} className="ranking-item">
                     <div className={`ranking-position ${getPositionClass(index)}`}>
                       {index + 1}
                     </div>
