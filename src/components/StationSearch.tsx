@@ -20,6 +20,7 @@ export function StationSearch({ stations, value, onChange, placeholder = '駅名
 
   // 表示用の駅リスト（フィルタがある場合はそれを使用）
   const availableStations = filteredStations || stations;
+  
 
   // Fuse.js の設定
   const fuse = new Fuse(availableStations, {
@@ -33,6 +34,7 @@ export function StationSearch({ stations, value, onChange, placeholder = '駅名
   const results = searchTerm 
     ? fuse.search(searchTerm).map(result => result.item)
     : availableStations;
+    
 
   // 外側クリックで閉じる
   useEffect(() => {

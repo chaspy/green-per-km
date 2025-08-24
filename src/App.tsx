@@ -82,6 +82,7 @@ function App() {
   const compatibleToStations = fromStation 
     ? getCompatibleStationsWithOperatingSystems(unifiedData.stations, operatingSystemsData, fromStation)
     : undefined;
+  
 
   // 距離・時間計算：物理路線優先、なければ運転系統を使用
   const distance = fromStation && toStation
@@ -109,6 +110,7 @@ function App() {
     'takasaki-line': '高崎線（東京〜高崎）',
     'joban-line': '常磐線（東京・上野〜水戸）',
     'yokosuka-line': '横須賀線（東京〜久里浜）',
+    'sobu-rapid': '総武線快速（東京〜君津）',
   };
 
   // 運転系統の表示用マッピング

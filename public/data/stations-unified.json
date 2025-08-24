@@ -1,25 +1,58 @@
 {
-  "lastUpdated": "2025-08-24T12:00:00Z",
+  "lastUpdated": "2025-08-24T07:59:08.166Z",
   "stations": [
     {
       "name": "東京",
-      "hiragana": "とうきょう", 
+      "hiragana": "とうきょう",
       "romaji": "tokyo",
       "lines": [
-        { "route": "chuo-rapid", "km": 0.0, "minutes": 0 },
-        { "route": "utsunomiya-line", "km": 0.0, "minutes": 0 },
-        { "route": "tokaido-line", "km": 0.0, "minutes": 0 },
-        { "route": "takasaki-line", "km": 0.0, "minutes": 0 },
-        { "route": "joban-line", "km": 0.0, "minutes": 0 },
-        { "route": "yokosuka-line", "km": 0.0, "minutes": 0 }
+        {
+          "route": "chuo-rapid",
+          "km": 0,
+          "minutes": 0
+        },
+        {
+          "route": "utsunomiya-line",
+          "km": 0,
+          "minutes": 0
+        },
+        {
+          "route": "tokaido-line",
+          "km": 0,
+          "minutes": 0
+        },
+        {
+          "route": "takasaki-line",
+          "km": 0,
+          "minutes": 0
+        },
+        {
+          "route": "joban-line",
+          "km": 0,
+          "minutes": 0
+        },
+        {
+          "route": "yokosuka-line",
+          "km": 0,
+          "minutes": 0
+        },
+        {
+          "route": "sobu-rapid",
+          "km": 0,
+          "minutes": 0
+        }
       ]
     },
     {
       "name": "神田",
       "hiragana": "かんだ",
-      "romaji": "kanda", 
+      "romaji": "kanda",
       "lines": [
-        { "route": "chuo-rapid", "km": 1.3, "minutes": 2 }
+        {
+          "route": "chuo-rapid",
+          "km": 1.3,
+          "minutes": 2
+        }
       ]
     },
     {
@@ -27,7 +60,11 @@
       "hiragana": "おちゃのみず",
       "romaji": "ochanomizu",
       "lines": [
-        { "route": "chuo-rapid", "km": 2.6, "minutes": 4 }
+        {
+          "route": "chuo-rapid",
+          "km": 2.6,
+          "minutes": 4
+        }
       ]
     },
     {
@@ -35,7 +72,11 @@
       "hiragana": "よつや",
       "romaji": "yotsuya",
       "lines": [
-        { "route": "chuo-rapid", "km": 6.6, "minutes": 8 }
+        {
+          "route": "chuo-rapid",
+          "km": 6.6,
+          "minutes": 8
+        }
       ]
     },
     {
@@ -43,16 +84,28 @@
       "hiragana": "しんじゅく",
       "romaji": "shinjuku",
       "lines": [
-        { "route": "chuo-rapid", "km": 10.3, "minutes": 14 },
-        { "route": "shonan-shinjuku-line", "km": 0.0, "minutes": 0 }
+        {
+          "route": "chuo-rapid",
+          "km": 10.3,
+          "minutes": 14
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 0,
+          "minutes": 0
+        }
       ]
     },
     {
       "name": "中野",
       "hiragana": "なかの",
-      "romaji": "nakano", 
+      "romaji": "nakano",
       "lines": [
-        { "route": "chuo-rapid", "km": 14.7, "minutes": 19 }
+        {
+          "route": "chuo-rapid",
+          "km": 14.7,
+          "minutes": 19
+        }
       ]
     },
     {
@@ -60,7 +113,11 @@
       "hiragana": "こうえんじ",
       "romaji": "koenji",
       "lines": [
-        { "route": "chuo-rapid", "km": 16.5, "minutes": 22 }
+        {
+          "route": "chuo-rapid",
+          "km": 16.5,
+          "minutes": 22
+        }
       ]
     },
     {
@@ -68,7 +125,11 @@
       "hiragana": "あさがや",
       "romaji": "asagaya",
       "lines": [
-        { "route": "chuo-rapid", "km": 17.8, "minutes": 24 }
+        {
+          "route": "chuo-rapid",
+          "km": 17.8,
+          "minutes": 24
+        }
       ]
     },
     {
@@ -76,7 +137,11 @@
       "hiragana": "おぎくぼ",
       "romaji": "ogikubo",
       "lines": [
-        { "route": "chuo-rapid", "km": 19.5, "minutes": 26 }
+        {
+          "route": "chuo-rapid",
+          "km": 19.5,
+          "minutes": 26
+        }
       ]
     },
     {
@@ -84,7 +149,11 @@
       "hiragana": "にしおぎくぼ",
       "romaji": "nishiogikubo",
       "lines": [
-        { "route": "chuo-rapid", "km": 21.1, "minutes": 28 }
+        {
+          "route": "chuo-rapid",
+          "km": 21.1,
+          "minutes": 28
+        }
       ]
     },
     {
@@ -92,7 +161,11 @@
       "hiragana": "きちじょうじ",
       "romaji": "kichijoji",
       "lines": [
-        { "route": "chuo-rapid", "km": 22.8, "minutes": 30 }
+        {
+          "route": "chuo-rapid",
+          "km": 22.8,
+          "minutes": 30
+        }
       ]
     },
     {
@@ -100,7 +173,11 @@
       "hiragana": "みたか",
       "romaji": "mitaka",
       "lines": [
-        { "route": "chuo-rapid", "km": 25.3, "minutes": 33 }
+        {
+          "route": "chuo-rapid",
+          "km": 25.3,
+          "minutes": 33
+        }
       ]
     },
     {
@@ -108,7 +185,11 @@
       "hiragana": "むさしさかい",
       "romaji": "musashisakai",
       "lines": [
-        { "route": "chuo-rapid", "km": 27.1, "minutes": 36 }
+        {
+          "route": "chuo-rapid",
+          "km": 27.1,
+          "minutes": 36
+        }
       ]
     },
     {
@@ -116,7 +197,11 @@
       "hiragana": "ひがしこがねい",
       "romaji": "higashikoganei",
       "lines": [
-        { "route": "chuo-rapid", "km": 28.6, "minutes": 38 }
+        {
+          "route": "chuo-rapid",
+          "km": 28.6,
+          "minutes": 38
+        }
       ]
     },
     {
@@ -124,7 +209,11 @@
       "hiragana": "むさしこがねい",
       "romaji": "musashikoganei",
       "lines": [
-        { "route": "chuo-rapid", "km": 30.3, "minutes": 40 }
+        {
+          "route": "chuo-rapid",
+          "km": 30.3,
+          "minutes": 40
+        }
       ]
     },
     {
@@ -132,7 +221,11 @@
       "hiragana": "こくぶんじ",
       "romaji": "kokubunji",
       "lines": [
-        { "route": "chuo-rapid", "km": 33.0, "minutes": 43 }
+        {
+          "route": "chuo-rapid",
+          "km": 33,
+          "minutes": 43
+        }
       ]
     },
     {
@@ -140,7 +233,11 @@
       "hiragana": "にしこくぶんじ",
       "romaji": "nishikokubunji",
       "lines": [
-        { "route": "chuo-rapid", "km": 34.8, "minutes": 45 }
+        {
+          "route": "chuo-rapid",
+          "km": 34.8,
+          "minutes": 45
+        }
       ]
     },
     {
@@ -148,7 +245,11 @@
       "hiragana": "くにたち",
       "romaji": "kunitachi",
       "lines": [
-        { "route": "chuo-rapid", "km": 37.1, "minutes": 48 }
+        {
+          "route": "chuo-rapid",
+          "km": 37.1,
+          "minutes": 48
+        }
       ]
     },
     {
@@ -156,7 +257,11 @@
       "hiragana": "たちかわ",
       "romaji": "tachikawa",
       "lines": [
-        { "route": "chuo-rapid", "km": 40.7, "minutes": 51 }
+        {
+          "route": "chuo-rapid",
+          "km": 40.7,
+          "minutes": 51
+        }
       ]
     },
     {
@@ -164,7 +269,11 @@
       "hiragana": "ひの",
       "romaji": "hino",
       "lines": [
-        { "route": "chuo-rapid", "km": 44.0, "minutes": 55 }
+        {
+          "route": "chuo-rapid",
+          "km": 44,
+          "minutes": 55
+        }
       ]
     },
     {
@@ -172,7 +281,11 @@
       "hiragana": "とよだ",
       "romaji": "toyoda",
       "lines": [
-        { "route": "chuo-rapid", "km": 46.7, "minutes": 58 }
+        {
+          "route": "chuo-rapid",
+          "km": 46.7,
+          "minutes": 58
+        }
       ]
     },
     {
@@ -180,7 +293,11 @@
       "hiragana": "はちおうじ",
       "romaji": "hachioji",
       "lines": [
-        { "route": "chuo-rapid", "km": 50.8, "minutes": 62 }
+        {
+          "route": "chuo-rapid",
+          "km": 50.8,
+          "minutes": 62
+        }
       ]
     },
     {
@@ -188,7 +305,11 @@
       "hiragana": "にしはちおうじ",
       "romaji": "nishihachioji",
       "lines": [
-        { "route": "chuo-rapid", "km": 52.3, "minutes": 64 }
+        {
+          "route": "chuo-rapid",
+          "km": 52.3,
+          "minutes": 64
+        }
       ]
     },
     {
@@ -196,7 +317,11 @@
       "hiragana": "たかお",
       "romaji": "takao",
       "lines": [
-        { "route": "chuo-rapid", "km": 53.1, "minutes": 67 }
+        {
+          "route": "chuo-rapid",
+          "km": 53.1,
+          "minutes": 67
+        }
       ]
     },
     {
@@ -204,9 +329,21 @@
       "hiragana": "うえの",
       "romaji": "ueno",
       "lines": [
-        { "route": "utsunomiya-line", "km": 3.6, "minutes": 6 },
-        { "route": "takasaki-line", "km": 3.6, "minutes": 4 },
-        { "route": "joban-line", "km": 3.6, "minutes": 6 }
+        {
+          "route": "utsunomiya-line",
+          "km": 3.6,
+          "minutes": 6
+        },
+        {
+          "route": "takasaki-line",
+          "km": 3.6,
+          "minutes": 4
+        },
+        {
+          "route": "joban-line",
+          "km": 3.6,
+          "minutes": 6
+        }
       ]
     },
     {
@@ -214,8 +351,16 @@
       "hiragana": "おく",
       "romaji": "oku",
       "lines": [
-        { "route": "utsunomiya-line", "km": 5.8, "minutes": 9 },
-        { "route": "takasaki-line", "km": 8.4, "minutes": 9 }
+        {
+          "route": "utsunomiya-line",
+          "km": 5.8,
+          "minutes": 9
+        },
+        {
+          "route": "takasaki-line",
+          "km": 8.4,
+          "minutes": 9
+        }
       ]
     },
     {
@@ -223,9 +368,21 @@
       "hiragana": "あかばね",
       "romaji": "akabane",
       "lines": [
-        { "route": "utsunomiya-line", "km": 7.8, "minutes": 12 },
-        { "route": "shonan-shinjuku-line", "km": 18.0, "minutes": 18 },
-        { "route": "takasaki-line", "km": 13.2, "minutes": 15 }
+        {
+          "route": "utsunomiya-line",
+          "km": 7.8,
+          "minutes": 12
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 18,
+          "minutes": 18
+        },
+        {
+          "route": "takasaki-line",
+          "km": 13.2,
+          "minutes": 15
+        }
       ]
     },
     {
@@ -233,9 +390,21 @@
       "hiragana": "うらわ",
       "romaji": "urawa",
       "lines": [
-        { "route": "utsunomiya-line", "km": 16.3, "minutes": 25 },
-        { "route": "shonan-shinjuku-line", "km": 23.0, "minutes": 23 },
-        { "route": "takasaki-line", "km": 24.2, "minutes": 26 }
+        {
+          "route": "utsunomiya-line",
+          "km": 16.3,
+          "minutes": 25
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 23,
+          "minutes": 23
+        },
+        {
+          "route": "takasaki-line",
+          "km": 24.2,
+          "minutes": 26
+        }
       ]
     },
     {
@@ -243,8 +412,16 @@
       "hiragana": "さいたましんとしん",
       "romaji": "saitama-shintoshin",
       "lines": [
-        { "route": "utsunomiya-line", "km": 18.8, "minutes": 28 },
-        { "route": "takasaki-line", "km": 28.7, "minutes": 30 }
+        {
+          "route": "utsunomiya-line",
+          "km": 18.8,
+          "minutes": 28
+        },
+        {
+          "route": "takasaki-line",
+          "km": 28.7,
+          "minutes": 30
+        }
       ]
     },
     {
@@ -252,9 +429,21 @@
       "hiragana": "おおみや",
       "romaji": "omiya",
       "lines": [
-        { "route": "utsunomiya-line", "km": 21.7, "minutes": 32 },
-        { "route": "shonan-shinjuku-line", "km": 30.0, "minutes": 30 },
-        { "route": "takasaki-line", "km": 30.3, "minutes": 32 }
+        {
+          "route": "utsunomiya-line",
+          "km": 21.7,
+          "minutes": 32
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 30,
+          "minutes": 30
+        },
+        {
+          "route": "takasaki-line",
+          "km": 30.3,
+          "minutes": 32
+        }
       ]
     },
     {
@@ -262,7 +451,11 @@
       "hiragana": "とろ",
       "romaji": "toro",
       "lines": [
-        { "route": "utsunomiya-line", "km": 24.1, "minutes": 35 }
+        {
+          "route": "utsunomiya-line",
+          "km": 24.1,
+          "minutes": 35
+        }
       ]
     },
     {
@@ -270,7 +463,11 @@
       "hiragana": "ひがしおおみや",
       "romaji": "higashi-omiya",
       "lines": [
-        { "route": "utsunomiya-line", "km": 26.8, "minutes": 38 }
+        {
+          "route": "utsunomiya-line",
+          "km": 26.8,
+          "minutes": 38
+        }
       ]
     },
     {
@@ -278,7 +475,11 @@
       "hiragana": "はすだ",
       "romaji": "hasuda",
       "lines": [
-        { "route": "utsunomiya-line", "km": 30.7, "minutes": 42 }
+        {
+          "route": "utsunomiya-line",
+          "km": 30.7,
+          "minutes": 42
+        }
       ]
     },
     {
@@ -286,7 +487,11 @@
       "hiragana": "しんしらおか",
       "romaji": "shin-shiraoka",
       "lines": [
-        { "route": "utsunomiya-line", "km": 32.8, "minutes": 44 }
+        {
+          "route": "utsunomiya-line",
+          "km": 32.8,
+          "minutes": 44
+        }
       ]
     },
     {
@@ -294,7 +499,11 @@
       "hiragana": "しらおか",
       "romaji": "shiraoka",
       "lines": [
-        { "route": "utsunomiya-line", "km": 35.3, "minutes": 47 }
+        {
+          "route": "utsunomiya-line",
+          "km": 35.3,
+          "minutes": 47
+        }
       ]
     },
     {
@@ -302,7 +511,11 @@
       "hiragana": "ひがしわしのみや",
       "romaji": "higashi-washinomiya",
       "lines": [
-        { "route": "utsunomiya-line", "km": 39.1, "minutes": 51 }
+        {
+          "route": "utsunomiya-line",
+          "km": 39.1,
+          "minutes": 51
+        }
       ]
     },
     {
@@ -310,7 +523,11 @@
       "hiragana": "くき",
       "romaji": "kuki",
       "lines": [
-        { "route": "utsunomiya-line", "km": 42.9, "minutes": 55 }
+        {
+          "route": "utsunomiya-line",
+          "km": 42.9,
+          "minutes": 55
+        }
       ]
     },
     {
@@ -318,7 +535,11 @@
       "hiragana": "くりはし",
       "romaji": "kurihashi",
       "lines": [
-        { "route": "utsunomiya-line", "km": 52.7, "minutes": 65 }
+        {
+          "route": "utsunomiya-line",
+          "km": 52.7,
+          "minutes": 65
+        }
       ]
     },
     {
@@ -326,7 +547,11 @@
       "hiragana": "こが",
       "romaji": "koga",
       "lines": [
-        { "route": "utsunomiya-line", "km": 59.9, "minutes": 72 }
+        {
+          "route": "utsunomiya-line",
+          "km": 59.9,
+          "minutes": 72
+        }
       ]
     },
     {
@@ -334,7 +559,11 @@
       "hiragana": "のぎ",
       "romaji": "nogi",
       "lines": [
-        { "route": "utsunomiya-line", "km": 65.4, "minutes": 78 }
+        {
+          "route": "utsunomiya-line",
+          "km": 65.4,
+          "minutes": 78
+        }
       ]
     },
     {
@@ -342,7 +571,11 @@
       "hiragana": "ままだ",
       "romaji": "mamada",
       "lines": [
-        { "route": "utsunomiya-line", "km": 70.1, "minutes": 83 }
+        {
+          "route": "utsunomiya-line",
+          "km": 70.1,
+          "minutes": 83
+        }
       ]
     },
     {
@@ -350,7 +583,11 @@
       "hiragana": "おやま",
       "romaji": "oyama",
       "lines": [
-        { "route": "utsunomiya-line", "km": 73.5, "minutes": 87 }
+        {
+          "route": "utsunomiya-line",
+          "km": 73.5,
+          "minutes": 87
+        }
       ]
     },
     {
@@ -358,7 +595,11 @@
       "hiragana": "こがねい",
       "romaji": "koganei-uts",
       "lines": [
-        { "route": "utsunomiya-line", "km": 80.8, "minutes": 95 }
+        {
+          "route": "utsunomiya-line",
+          "km": 80.8,
+          "minutes": 95
+        }
       ]
     },
     {
@@ -366,7 +607,11 @@
       "hiragana": "じちいだい",
       "romaji": "jichiidai",
       "lines": [
-        { "route": "utsunomiya-line", "km": 86.1, "minutes": 101 }
+        {
+          "route": "utsunomiya-line",
+          "km": 86.1,
+          "minutes": 101
+        }
       ]
     },
     {
@@ -374,7 +619,11 @@
       "hiragana": "いしばし",
       "romaji": "ishibashi",
       "lines": [
-        { "route": "utsunomiya-line", "km": 93.4, "minutes": 108 }
+        {
+          "route": "utsunomiya-line",
+          "km": 93.4,
+          "minutes": 108
+        }
       ]
     },
     {
@@ -382,7 +631,11 @@
       "hiragana": "すずめのみや",
       "romaji": "suzumenomiya",
       "lines": [
-        { "route": "utsunomiya-line", "km": 103.2, "minutes": 118 }
+        {
+          "route": "utsunomiya-line",
+          "km": 103.2,
+          "minutes": 118
+        }
       ]
     },
     {
@@ -390,7 +643,11 @@
       "hiragana": "うつのみや",
       "romaji": "utsunomiya",
       "lines": [
-        { "route": "utsunomiya-line", "km": 109.5, "minutes": 125 }
+        {
+          "route": "utsunomiya-line",
+          "km": 109.5,
+          "minutes": 125
+        }
       ]
     },
     {
@@ -398,8 +655,16 @@
       "hiragana": "しんばし",
       "romaji": "shimbashi",
       "lines": [
-        { "route": "tokaido-line", "km": 2.2, "minutes": 4 },
-        { "route": "yokosuka-line", "km": 2.2, "minutes": 4 }
+        {
+          "route": "tokaido-line",
+          "km": 2.2,
+          "minutes": 4
+        },
+        {
+          "route": "yokosuka-line",
+          "km": 2.2,
+          "minutes": 4
+        }
       ]
     },
     {
@@ -407,8 +672,16 @@
       "hiragana": "しながわ",
       "romaji": "shinagawa",
       "lines": [
-        { "route": "tokaido-line", "km": 6.8, "minutes": 10 },
-        { "route": "yokosuka-line", "km": 6.8, "minutes": 10 }
+        {
+          "route": "tokaido-line",
+          "km": 6.8,
+          "minutes": 10
+        },
+        {
+          "route": "yokosuka-line",
+          "km": 6.8,
+          "minutes": 10
+        }
       ]
     },
     {
@@ -416,7 +689,11 @@
       "hiragana": "かわさき",
       "romaji": "kawasaki",
       "lines": [
-        { "route": "tokaido-line", "km": 18.2, "minutes": 18 }
+        {
+          "route": "tokaido-line",
+          "km": 18.2,
+          "minutes": 18
+        }
       ]
     },
     {
@@ -424,9 +701,21 @@
       "hiragana": "よこはま",
       "romaji": "yokohama",
       "lines": [
-        { "route": "tokaido-line", "km": 28.8, "minutes": 28 },
-        { "route": "shonan-shinjuku-line", "km": 30.0, "minutes": 30 },
-        { "route": "yokosuka-line", "km": 26.6, "minutes": 30 }
+        {
+          "route": "tokaido-line",
+          "km": 28.8,
+          "minutes": 28
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 30,
+          "minutes": 30
+        },
+        {
+          "route": "yokosuka-line",
+          "km": 26.6,
+          "minutes": 30
+        }
       ]
     },
     {
@@ -434,9 +723,21 @@
       "hiragana": "とつか",
       "romaji": "totsuka",
       "lines": [
-        { "route": "tokaido-line", "km": 38.7, "minutes": 34 },
-        { "route": "shonan-shinjuku-line", "km": 41.0, "minutes": 41 },
-        { "route": "yokosuka-line", "km": 38.1, "minutes": 41 }
+        {
+          "route": "tokaido-line",
+          "km": 38.7,
+          "minutes": 34
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 41,
+          "minutes": 41
+        },
+        {
+          "route": "yokosuka-line",
+          "km": 38.1,
+          "minutes": 41
+        }
       ]
     },
     {
@@ -444,9 +745,21 @@
       "hiragana": "おおふな",
       "romaji": "ofuna",
       "lines": [
-        { "route": "tokaido-line", "km": 45.1, "minutes": 38 },
-        { "route": "shonan-shinjuku-line", "km": 47.0, "minutes": 47 },
-        { "route": "yokosuka-line", "km": 44.3, "minutes": 47 }
+        {
+          "route": "tokaido-line",
+          "km": 45.1,
+          "minutes": 38
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 47,
+          "minutes": 47
+        },
+        {
+          "route": "yokosuka-line",
+          "km": 44.3,
+          "minutes": 47
+        }
       ]
     },
     {
@@ -454,8 +767,16 @@
       "hiragana": "ふじさわ",
       "romaji": "fujisawa",
       "lines": [
-        { "route": "tokaido-line", "km": 50.5, "minutes": 42 },
-        { "route": "shonan-shinjuku-line", "km": 52.0, "minutes": 52 }
+        {
+          "route": "tokaido-line",
+          "km": 50.5,
+          "minutes": 42
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 52,
+          "minutes": 52
+        }
       ]
     },
     {
@@ -463,8 +784,16 @@
       "hiragana": "つじどう",
       "romaji": "tsujido",
       "lines": [
-        { "route": "tokaido-line", "km": 53.7, "minutes": 45 },
-        { "route": "shonan-shinjuku-line", "km": 55.0, "minutes": 55 }
+        {
+          "route": "tokaido-line",
+          "km": 53.7,
+          "minutes": 45
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 55,
+          "minutes": 55
+        }
       ]
     },
     {
@@ -472,8 +801,16 @@
       "hiragana": "ちがさき",
       "romaji": "chigasaki",
       "lines": [
-        { "route": "tokaido-line", "km": 56.8, "minutes": 48 },
-        { "route": "shonan-shinjuku-line", "km": 58.0, "minutes": 58 }
+        {
+          "route": "tokaido-line",
+          "km": 56.8,
+          "minutes": 48
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 58,
+          "minutes": 58
+        }
       ]
     },
     {
@@ -481,8 +818,16 @@
       "hiragana": "ひらつか",
       "romaji": "hiratsuka",
       "lines": [
-        { "route": "tokaido-line", "km": 63.2, "minutes": 54 },
-        { "route": "shonan-shinjuku-line", "km": 65.0, "minutes": 65 }
+        {
+          "route": "tokaido-line",
+          "km": 63.2,
+          "minutes": 54
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 65,
+          "minutes": 65
+        }
       ]
     },
     {
@@ -490,7 +835,11 @@
       "hiragana": "おおいそ",
       "romaji": "oiso",
       "lines": [
-        { "route": "tokaido-line", "km": 67.3, "minutes": 58 }
+        {
+          "route": "tokaido-line",
+          "km": 67.3,
+          "minutes": 58
+        }
       ]
     },
     {
@@ -498,7 +847,11 @@
       "hiragana": "にのみや",
       "romaji": "ninomiya",
       "lines": [
-        { "route": "tokaido-line", "km": 70.9, "minutes": 61 }
+        {
+          "route": "tokaido-line",
+          "km": 70.9,
+          "minutes": 61
+        }
       ]
     },
     {
@@ -506,8 +859,16 @@
       "hiragana": "こうづ",
       "romaji": "kozu",
       "lines": [
-        { "route": "tokaido-line", "km": 74.7, "minutes": 65 },
-        { "route": "shonan-shinjuku-line", "km": 72.0, "minutes": 72 }
+        {
+          "route": "tokaido-line",
+          "km": 74.7,
+          "minutes": 65
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 72,
+          "minutes": 72
+        }
       ]
     },
     {
@@ -515,7 +876,11 @@
       "hiragana": "かものみや",
       "romaji": "kamonomiya",
       "lines": [
-        { "route": "tokaido-line", "km": 78.4, "minutes": 69 }
+        {
+          "route": "tokaido-line",
+          "km": 78.4,
+          "minutes": 69
+        }
       ]
     },
     {
@@ -523,8 +888,16 @@
       "hiragana": "おだわら",
       "romaji": "odawara",
       "lines": [
-        { "route": "tokaido-line", "km": 83.9, "minutes": 77 },
-        { "route": "shonan-shinjuku-line", "km": 80.0, "minutes": 75 }
+        {
+          "route": "tokaido-line",
+          "km": 83.9,
+          "minutes": 77
+        },
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 80,
+          "minutes": 75
+        }
       ]
     },
     {
@@ -532,7 +905,11 @@
       "hiragana": "はやかわ",
       "romaji": "hayakawa",
       "lines": [
-        { "route": "tokaido-line", "km": 87.1, "minutes": 81 }
+        {
+          "route": "tokaido-line",
+          "km": 87.1,
+          "minutes": 81
+        }
       ]
     },
     {
@@ -540,7 +917,11 @@
       "hiragana": "ねぶかわ",
       "romaji": "nebukawa",
       "lines": [
-        { "route": "tokaido-line", "km": 90.4, "minutes": 85 }
+        {
+          "route": "tokaido-line",
+          "km": 90.4,
+          "minutes": 85
+        }
       ]
     },
     {
@@ -548,7 +929,11 @@
       "hiragana": "まなづる",
       "romaji": "manazuru",
       "lines": [
-        { "route": "tokaido-line", "km": 95.4, "minutes": 90 }
+        {
+          "route": "tokaido-line",
+          "km": 95.4,
+          "minutes": 90
+        }
       ]
     },
     {
@@ -556,7 +941,11 @@
       "hiragana": "ゆがわら",
       "romaji": "yugawara",
       "lines": [
-        { "route": "tokaido-line", "km": 100.7, "minutes": 95 }
+        {
+          "route": "tokaido-line",
+          "km": 100.7,
+          "minutes": 95
+        }
       ]
     },
     {
@@ -564,7 +953,11 @@
       "hiragana": "あたみ",
       "romaji": "atami",
       "lines": [
-        { "route": "tokaido-line", "km": 104.6, "minutes": 98 }
+        {
+          "route": "tokaido-line",
+          "km": 104.6,
+          "minutes": 98
+        }
       ]
     },
     {
@@ -572,7 +965,11 @@
       "hiragana": "いけぶくろ",
       "romaji": "ikebukuro",
       "lines": [
-        { "route": "shonan-shinjuku-line", "km": 7.0, "minutes": 7 }
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 7,
+          "minutes": 7
+        }
       ]
     },
     {
@@ -580,7 +977,11 @@
       "hiragana": "えびす",
       "romaji": "ebisu",
       "lines": [
-        { "route": "shonan-shinjuku-line", "km": 4.0, "minutes": 4 }
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 4,
+          "minutes": 4
+        }
       ]
     },
     {
@@ -588,7 +989,11 @@
       "hiragana": "しぶや",
       "romaji": "shibuya",
       "lines": [
-        { "route": "shonan-shinjuku-line", "km": 7.0, "minutes": 7 }
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 7,
+          "minutes": 7
+        }
       ]
     },
     {
@@ -596,7 +1001,11 @@
       "hiragana": "おおさき",
       "romaji": "osaki",
       "lines": [
-        { "route": "shonan-shinjuku-line", "km": 11.0, "minutes": 11 }
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 11,
+          "minutes": 11
+        }
       ]
     },
     {
@@ -604,8 +1013,16 @@
       "hiragana": "むさしこすぎ",
       "romaji": "musashikosugi",
       "lines": [
-        { "route": "shonan-shinjuku-line", "km": 20.0, "minutes": 20 },
-        { "route": "yokosuka-line", "km": 16.2, "minutes": 20 }
+        {
+          "route": "shonan-shinjuku-line",
+          "km": 20,
+          "minutes": 20
+        },
+        {
+          "route": "yokosuka-line",
+          "km": 16.2,
+          "minutes": 20
+        }
       ]
     },
     {
@@ -613,7 +1030,11 @@
       "hiragana": "みやはら",
       "romaji": "miyahara",
       "lines": [
-        { "route": "takasaki-line", "km": 34.3, "minutes": 37 }
+        {
+          "route": "takasaki-line",
+          "km": 34.3,
+          "minutes": 37
+        }
       ]
     },
     {
@@ -621,7 +1042,11 @@
       "hiragana": "あげお",
       "romaji": "ageo",
       "lines": [
-        { "route": "takasaki-line", "km": 38.5, "minutes": 42 }
+        {
+          "route": "takasaki-line",
+          "km": 38.5,
+          "minutes": 42
+        }
       ]
     },
     {
@@ -629,7 +1054,11 @@
       "hiragana": "きたあげお",
       "romaji": "kita-ageo",
       "lines": [
-        { "route": "takasaki-line", "km": 40.2, "minutes": 44 }
+        {
+          "route": "takasaki-line",
+          "km": 40.2,
+          "minutes": 44
+        }
       ]
     },
     {
@@ -637,7 +1066,11 @@
       "hiragana": "おけがわ",
       "romaji": "okegawa",
       "lines": [
-        { "route": "takasaki-line", "km": 42.1, "minutes": 46 }
+        {
+          "route": "takasaki-line",
+          "km": 42.1,
+          "minutes": 46
+        }
       ]
     },
     {
@@ -645,7 +1078,11 @@
       "hiragana": "きたもと",
       "romaji": "kitamoto",
       "lines": [
-        { "route": "takasaki-line", "km": 46.7, "minutes": 51 }
+        {
+          "route": "takasaki-line",
+          "km": 46.7,
+          "minutes": 51
+        }
       ]
     },
     {
@@ -653,7 +1090,11 @@
       "hiragana": "こうのす",
       "romaji": "konosu",
       "lines": [
-        { "route": "takasaki-line", "km": 50.3, "minutes": 55 }
+        {
+          "route": "takasaki-line",
+          "km": 50.3,
+          "minutes": 55
+        }
       ]
     },
     {
@@ -661,7 +1102,11 @@
       "hiragana": "きたこうのす",
       "romaji": "kita-konosu",
       "lines": [
-        { "route": "takasaki-line", "km": 54.6, "minutes": 59 }
+        {
+          "route": "takasaki-line",
+          "km": 54.6,
+          "minutes": 59
+        }
       ]
     },
     {
@@ -669,7 +1114,11 @@
       "hiragana": "ふきあげ",
       "romaji": "fukiage",
       "lines": [
-        { "route": "takasaki-line", "km": 57.6, "minutes": 62 }
+        {
+          "route": "takasaki-line",
+          "km": 57.6,
+          "minutes": 62
+        }
       ]
     },
     {
@@ -677,7 +1126,11 @@
       "hiragana": "ぎょうだ",
       "romaji": "gyoda",
       "lines": [
-        { "route": "takasaki-line", "km": 59.9, "minutes": 65 }
+        {
+          "route": "takasaki-line",
+          "km": 59.9,
+          "minutes": 65
+        }
       ]
     },
     {
@@ -685,7 +1138,11 @@
       "hiragana": "くまがや",
       "romaji": "kumagaya",
       "lines": [
-        { "route": "takasaki-line", "km": 64.7, "minutes": 70 }
+        {
+          "route": "takasaki-line",
+          "km": 64.7,
+          "minutes": 70
+        }
       ]
     },
     {
@@ -693,7 +1150,11 @@
       "hiragana": "かごはら",
       "romaji": "kagohara",
       "lines": [
-        { "route": "takasaki-line", "km": 76.3, "minutes": 83 }
+        {
+          "route": "takasaki-line",
+          "km": 76.3,
+          "minutes": 83
+        }
       ]
     },
     {
@@ -701,7 +1162,11 @@
       "hiragana": "ふかや",
       "romaji": "fukaya",
       "lines": [
-        { "route": "takasaki-line", "km": 80.6, "minutes": 87 }
+        {
+          "route": "takasaki-line",
+          "km": 80.6,
+          "minutes": 87
+        }
       ]
     },
     {
@@ -709,7 +1174,11 @@
       "hiragana": "おかべ",
       "romaji": "okabe",
       "lines": [
-        { "route": "takasaki-line", "km": 86.2, "minutes": 93 }
+        {
+          "route": "takasaki-line",
+          "km": 86.2,
+          "minutes": 93
+        }
       ]
     },
     {
@@ -717,7 +1186,11 @@
       "hiragana": "ほんじょう",
       "romaji": "honjo",
       "lines": [
-        { "route": "takasaki-line", "km": 89.5, "minutes": 97 }
+        {
+          "route": "takasaki-line",
+          "km": 89.5,
+          "minutes": 97
+        }
       ]
     },
     {
@@ -725,7 +1198,11 @@
       "hiragana": "じんぼはら",
       "romaji": "jimbohara",
       "lines": [
-        { "route": "takasaki-line", "km": 94.7, "minutes": 103 }
+        {
+          "route": "takasaki-line",
+          "km": 94.7,
+          "minutes": 103
+        }
       ]
     },
     {
@@ -733,7 +1210,11 @@
       "hiragana": "しんまち",
       "romaji": "shinmachi",
       "lines": [
-        { "route": "takasaki-line", "km": 100.8, "minutes": 109 }
+        {
+          "route": "takasaki-line",
+          "km": 100.8,
+          "minutes": 109
+        }
       ]
     },
     {
@@ -741,7 +1222,11 @@
       "hiragana": "くらがの",
       "romaji": "kuragano",
       "lines": [
-        { "route": "takasaki-line", "km": 103.2, "minutes": 112 }
+        {
+          "route": "takasaki-line",
+          "km": 103.2,
+          "minutes": 112
+        }
       ]
     },
     {
@@ -749,7 +1234,11 @@
       "hiragana": "たかさき",
       "romaji": "takasaki",
       "lines": [
-        { "route": "takasaki-line", "km": 105.2, "minutes": 114 }
+        {
+          "route": "takasaki-line",
+          "km": 105.2,
+          "minutes": 114
+        }
       ]
     },
     {
@@ -757,7 +1246,11 @@
       "hiragana": "にっぽり",
       "romaji": "nippori",
       "lines": [
-        { "route": "joban-line", "km": 5.8, "minutes": 9 }
+        {
+          "route": "joban-line",
+          "km": 5.8,
+          "minutes": 9
+        }
       ]
     },
     {
@@ -765,7 +1258,11 @@
       "hiragana": "みかわしま",
       "romaji": "mikawashima",
       "lines": [
-        { "route": "joban-line", "km": 7.8, "minutes": 12 }
+        {
+          "route": "joban-line",
+          "km": 7.8,
+          "minutes": 12
+        }
       ]
     },
     {
@@ -773,7 +1270,11 @@
       "hiragana": "みなみせんじゅ",
       "romaji": "minami-senju",
       "lines": [
-        { "route": "joban-line", "km": 9.3, "minutes": 15 }
+        {
+          "route": "joban-line",
+          "km": 9.3,
+          "minutes": 15
+        }
       ]
     },
     {
@@ -781,7 +1282,11 @@
       "hiragana": "きたせんじゅ",
       "romaji": "kita-senju",
       "lines": [
-        { "route": "joban-line", "km": 11.8, "minutes": 18 }
+        {
+          "route": "joban-line",
+          "km": 11.8,
+          "minutes": 18
+        }
       ]
     },
     {
@@ -789,7 +1294,11 @@
       "hiragana": "あやせ",
       "romaji": "ayase",
       "lines": [
-        { "route": "joban-line", "km": 16.2, "minutes": 24 }
+        {
+          "route": "joban-line",
+          "km": 16.2,
+          "minutes": 24
+        }
       ]
     },
     {
@@ -797,7 +1306,11 @@
       "hiragana": "かめあり",
       "romaji": "kameari",
       "lines": [
-        { "route": "joban-line", "km": 19.7, "minutes": 29 }
+        {
+          "route": "joban-line",
+          "km": 19.7,
+          "minutes": 29
+        }
       ]
     },
     {
@@ -805,7 +1318,11 @@
       "hiragana": "かなまち",
       "romaji": "kanamachi",
       "lines": [
-        { "route": "joban-line", "km": 22.5, "minutes": 33 }
+        {
+          "route": "joban-line",
+          "km": 22.5,
+          "minutes": 33
+        }
       ]
     },
     {
@@ -813,7 +1330,11 @@
       "hiragana": "まつど",
       "romaji": "matsudo",
       "lines": [
-        { "route": "joban-line", "km": 26.8, "minutes": 39 }
+        {
+          "route": "joban-line",
+          "km": 26.8,
+          "minutes": 39
+        }
       ]
     },
     {
@@ -821,7 +1342,11 @@
       "hiragana": "きたまつど",
       "romaji": "kita-matsudo",
       "lines": [
-        { "route": "joban-line", "km": 29.1, "minutes": 42 }
+        {
+          "route": "joban-line",
+          "km": 29.1,
+          "minutes": 42
+        }
       ]
     },
     {
@@ -829,7 +1354,11 @@
       "hiragana": "まばし",
       "romaji": "mabashi",
       "lines": [
-        { "route": "joban-line", "km": 31.4, "minutes": 45 }
+        {
+          "route": "joban-line",
+          "km": 31.4,
+          "minutes": 45
+        }
       ]
     },
     {
@@ -837,7 +1366,11 @@
       "hiragana": "しんまつど",
       "romaji": "shin-matsudo",
       "lines": [
-        { "route": "joban-line", "km": 33.2, "minutes": 48 }
+        {
+          "route": "joban-line",
+          "km": 33.2,
+          "minutes": 48
+        }
       ]
     },
     {
@@ -845,7 +1378,11 @@
       "hiragana": "きたこがね",
       "romaji": "kita-kogane",
       "lines": [
-        { "route": "joban-line", "km": 36.1, "minutes": 52 }
+        {
+          "route": "joban-line",
+          "km": 36.1,
+          "minutes": 52
+        }
       ]
     },
     {
@@ -853,7 +1390,11 @@
       "hiragana": "みなみかしわ",
       "romaji": "minami-kashiwa",
       "lines": [
-        { "route": "joban-line", "km": 38.4, "minutes": 55 }
+        {
+          "route": "joban-line",
+          "km": 38.4,
+          "minutes": 55
+        }
       ]
     },
     {
@@ -861,7 +1402,11 @@
       "hiragana": "かしわ",
       "romaji": "kashiwa",
       "lines": [
-        { "route": "joban-line", "km": 40.2, "minutes": 57 }
+        {
+          "route": "joban-line",
+          "km": 40.2,
+          "minutes": 57
+        }
       ]
     },
     {
@@ -869,7 +1414,11 @@
       "hiragana": "きたかしわ",
       "romaji": "kita-kashiwa",
       "lines": [
-        { "route": "joban-line", "km": 42.8, "minutes": 61 }
+        {
+          "route": "joban-line",
+          "km": 42.8,
+          "minutes": 61
+        }
       ]
     },
     {
@@ -877,7 +1426,11 @@
       "hiragana": "あびこ",
       "romaji": "abiko",
       "lines": [
-        { "route": "joban-line", "km": 46.3, "minutes": 66 }
+        {
+          "route": "joban-line",
+          "km": 46.3,
+          "minutes": 66
+        }
       ]
     },
     {
@@ -885,7 +1438,11 @@
       "hiragana": "てんのうだい",
       "romaji": "tennodai",
       "lines": [
-        { "route": "joban-line", "km": 48.9, "minutes": 69 }
+        {
+          "route": "joban-line",
+          "km": 48.9,
+          "minutes": 69
+        }
       ]
     },
     {
@@ -893,7 +1450,11 @@
       "hiragana": "とりで",
       "romaji": "toride",
       "lines": [
-        { "route": "joban-line", "km": 51.1, "minutes": 72 }
+        {
+          "route": "joban-line",
+          "km": 51.1,
+          "minutes": 72
+        }
       ]
     },
     {
@@ -901,7 +1462,11 @@
       "hiragana": "ふじしろ",
       "romaji": "fujishiro",
       "lines": [
-        { "route": "joban-line", "km": 54.3, "minutes": 76 }
+        {
+          "route": "joban-line",
+          "km": 54.3,
+          "minutes": 76
+        }
       ]
     },
     {
@@ -909,7 +1474,11 @@
       "hiragana": "りゅうがさきし",
       "romaji": "ryugasaki",
       "lines": [
-        { "route": "joban-line", "km": 57.2, "minutes": 80 }
+        {
+          "route": "joban-line",
+          "km": 57.2,
+          "minutes": 80
+        }
       ]
     },
     {
@@ -917,7 +1486,11 @@
       "hiragana": "うしく",
       "romaji": "ushiku",
       "lines": [
-        { "route": "joban-line", "km": 60.8, "minutes": 85 }
+        {
+          "route": "joban-line",
+          "km": 60.8,
+          "minutes": 85
+        }
       ]
     },
     {
@@ -925,7 +1498,11 @@
       "hiragana": "ひたちのうしく",
       "romaji": "hitachino-ushiku",
       "lines": [
-        { "route": "joban-line", "km": 63.5, "minutes": 88 }
+        {
+          "route": "joban-line",
+          "km": 63.5,
+          "minutes": 88
+        }
       ]
     },
     {
@@ -933,7 +1510,11 @@
       "hiragana": "あらかわおき",
       "romaji": "arakawa-oki",
       "lines": [
-        { "route": "joban-line", "km": 66.8, "minutes": 93 }
+        {
+          "route": "joban-line",
+          "km": 66.8,
+          "minutes": 93
+        }
       ]
     },
     {
@@ -941,7 +1522,11 @@
       "hiragana": "つちうら",
       "romaji": "tsuchiura",
       "lines": [
-        { "route": "joban-line", "km": 77.5, "minutes": 108 }
+        {
+          "route": "joban-line",
+          "km": 77.5,
+          "minutes": 108
+        }
       ]
     },
     {
@@ -949,7 +1534,11 @@
       "hiragana": "かんだつ",
       "romaji": "kandatsu",
       "lines": [
-        { "route": "joban-line", "km": 82.1, "minutes": 114 }
+        {
+          "route": "joban-line",
+          "km": 82.1,
+          "minutes": 114
+        }
       ]
     },
     {
@@ -957,7 +1546,11 @@
       "hiragana": "たかはま",
       "romaji": "takahama",
       "lines": [
-        { "route": "joban-line", "km": 85.4, "minutes": 118 }
+        {
+          "route": "joban-line",
+          "km": 85.4,
+          "minutes": 118
+        }
       ]
     },
     {
@@ -965,7 +1558,11 @@
       "hiragana": "いしおか",
       "romaji": "ishioka",
       "lines": [
-        { "route": "joban-line", "km": 88.9, "minutes": 123 }
+        {
+          "route": "joban-line",
+          "km": 88.9,
+          "minutes": 123
+        }
       ]
     },
     {
@@ -973,7 +1570,11 @@
       "hiragana": "はとり",
       "romaji": "hatori",
       "lines": [
-        { "route": "joban-line", "km": 95.2, "minutes": 132 }
+        {
+          "route": "joban-line",
+          "km": 95.2,
+          "minutes": 132
+        }
       ]
     },
     {
@@ -981,7 +1582,11 @@
       "hiragana": "いわま",
       "romaji": "iwama",
       "lines": [
-        { "route": "joban-line", "km": 102.4, "minutes": 142 }
+        {
+          "route": "joban-line",
+          "km": 102.4,
+          "minutes": 142
+        }
       ]
     },
     {
@@ -989,7 +1594,11 @@
       "hiragana": "ともべ",
       "romaji": "tomobe",
       "lines": [
-        { "route": "joban-line", "km": 112.5, "minutes": 156 }
+        {
+          "route": "joban-line",
+          "km": 112.5,
+          "minutes": 156
+        }
       ]
     },
     {
@@ -997,7 +1606,11 @@
       "hiragana": "うちはら",
       "romaji": "uchihara",
       "lines": [
-        { "route": "joban-line", "km": 118.7, "minutes": 164 }
+        {
+          "route": "joban-line",
+          "km": 118.7,
+          "minutes": 164
+        }
       ]
     },
     {
@@ -1005,7 +1618,11 @@
       "hiragana": "あかつか",
       "romaji": "akatsuka",
       "lines": [
-        { "route": "joban-line", "km": 124.2, "minutes": 172 }
+        {
+          "route": "joban-line",
+          "km": 124.2,
+          "minutes": 172
+        }
       ]
     },
     {
@@ -1013,7 +1630,11 @@
       "hiragana": "かいらくえん",
       "romaji": "kairakuen",
       "lines": [
-        { "route": "joban-line", "km": 126.8, "minutes": 176 }
+        {
+          "route": "joban-line",
+          "km": 126.8,
+          "minutes": 176
+        }
       ]
     },
     {
@@ -1021,7 +1642,11 @@
       "hiragana": "みと",
       "romaji": "mito",
       "lines": [
-        { "route": "joban-line", "km": 128.9, "minutes": 179 }
+        {
+          "route": "joban-line",
+          "km": 128.9,
+          "minutes": 179
+        }
       ]
     },
     {
@@ -1029,7 +1654,11 @@
       "hiragana": "にしおおい",
       "romaji": "nishioi",
       "lines": [
-        { "route": "yokosuka-line", "km": 11.0, "minutes": 15 }
+        {
+          "route": "yokosuka-line",
+          "km": 11,
+          "minutes": 15
+        }
       ]
     },
     {
@@ -1037,7 +1666,11 @@
       "hiragana": "しんかわさき",
       "romaji": "shinkawasaki",
       "lines": [
-        { "route": "yokosuka-line", "km": 21.4, "minutes": 25 }
+        {
+          "route": "yokosuka-line",
+          "km": 21.4,
+          "minutes": 25
+        }
       ]
     },
     {
@@ -1045,7 +1678,11 @@
       "hiragana": "ほどがや",
       "romaji": "hodogaya",
       "lines": [
-        { "route": "yokosuka-line", "km": 30.2, "minutes": 34 }
+        {
+          "route": "yokosuka-line",
+          "km": 30.2,
+          "minutes": 34
+        }
       ]
     },
     {
@@ -1053,7 +1690,11 @@
       "hiragana": "ひがしとつか",
       "romaji": "higashitotsuka",
       "lines": [
-        { "route": "yokosuka-line", "km": 34.8, "minutes": 38 }
+        {
+          "route": "yokosuka-line",
+          "km": 34.8,
+          "minutes": 38
+        }
       ]
     },
     {
@@ -1061,7 +1702,11 @@
       "hiragana": "きたかまくら",
       "romaji": "kita-kamakura",
       "lines": [
-        { "route": "yokosuka-line", "km": 47.8, "minutes": 52 }
+        {
+          "route": "yokosuka-line",
+          "km": 47.8,
+          "minutes": 52
+        }
       ]
     },
     {
@@ -1069,7 +1714,11 @@
       "hiragana": "かまくら",
       "romaji": "kamakura",
       "lines": [
-        { "route": "yokosuka-line", "km": 50.1, "minutes": 55 }
+        {
+          "route": "yokosuka-line",
+          "km": 50.1,
+          "minutes": 55
+        }
       ]
     },
     {
@@ -1077,7 +1726,11 @@
       "hiragana": "ずし",
       "romaji": "zushi",
       "lines": [
-        { "route": "yokosuka-line", "km": 53.7, "minutes": 60 }
+        {
+          "route": "yokosuka-line",
+          "km": 53.7,
+          "minutes": 60
+        }
       ]
     },
     {
@@ -1085,7 +1738,11 @@
       "hiragana": "ひがしずし",
       "romaji": "higashi-zushi",
       "lines": [
-        { "route": "yokosuka-line", "km": 55.9, "minutes": 62 }
+        {
+          "route": "yokosuka-line",
+          "km": 55.9,
+          "minutes": 62
+        }
       ]
     },
     {
@@ -1093,7 +1750,11 @@
       "hiragana": "たうら",
       "romaji": "taura",
       "lines": [
-        { "route": "yokosuka-line", "km": 59.4, "minutes": 66 }
+        {
+          "route": "yokosuka-line",
+          "km": 59.4,
+          "minutes": 66
+        }
       ]
     },
     {
@@ -1101,7 +1762,11 @@
       "hiragana": "よこすか",
       "romaji": "yokosuka",
       "lines": [
-        { "route": "yokosuka-line", "km": 63.2, "minutes": 71 }
+        {
+          "route": "yokosuka-line",
+          "km": 63.2,
+          "minutes": 71
+        }
       ]
     },
     {
@@ -1109,7 +1774,11 @@
       "hiragana": "きぬがさ",
       "romaji": "kinugasa",
       "lines": [
-        { "route": "yokosuka-line", "km": 66.8, "minutes": 76 }
+        {
+          "route": "yokosuka-line",
+          "km": 66.8,
+          "minutes": 76
+        }
       ]
     },
     {
@@ -1117,7 +1786,239 @@
       "hiragana": "くりはま",
       "romaji": "kurihama",
       "lines": [
-        { "route": "yokosuka-line", "km": 73.3, "minutes": 85 }
+        {
+          "route": "yokosuka-line",
+          "km": 73.3,
+          "minutes": 85
+        }
+      ]
+    },
+    {
+      "name": "新日本橋",
+      "hiragana": "しんにほんばし",
+      "romaji": "shinnihombashi",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 1.3,
+          "minutes": 2
+        }
+      ]
+    },
+    {
+      "name": "馬喰町",
+      "hiragana": "ばくろちょう",
+      "romaji": "bakuro-yokoyama",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 2.8,
+          "minutes": 4
+        }
+      ]
+    },
+    {
+      "name": "錦糸町",
+      "hiragana": "きんしちょう",
+      "romaji": "kinshicho",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 6.8,
+          "minutes": 8
+        }
+      ]
+    },
+    {
+      "name": "新小岩",
+      "hiragana": "しんこいわ",
+      "romaji": "shinkoiwa",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 13.2,
+          "minutes": 15
+        }
+      ]
+    },
+    {
+      "name": "市川",
+      "hiragana": "いちかわ",
+      "romaji": "ichikawa",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 17.5,
+          "minutes": 20
+        }
+      ]
+    },
+    {
+      "name": "船橋",
+      "hiragana": "ふなばし",
+      "romaji": "funabashi",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 24.2,
+          "minutes": 28
+        }
+      ]
+    },
+    {
+      "name": "津田沼",
+      "hiragana": "つだぬま",
+      "romaji": "tsudanuma",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 29.1,
+          "minutes": 33
+        }
+      ]
+    },
+    {
+      "name": "稲毛",
+      "hiragana": "いなげ",
+      "romaji": "inage",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 35.6,
+          "minutes": 40
+        }
+      ]
+    },
+    {
+      "name": "千葉",
+      "hiragana": "ちば",
+      "romaji": "chiba",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 39.2,
+          "minutes": 44
+        }
+      ]
+    },
+    {
+      "name": "本千葉",
+      "hiragana": "ほんちば",
+      "romaji": "honchiba",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 42.1,
+          "minutes": 47
+        }
+      ]
+    },
+    {
+      "name": "蘇我",
+      "hiragana": "そが",
+      "romaji": "soga",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 43.8,
+          "minutes": 49
+        }
+      ]
+    },
+    {
+      "name": "浜野",
+      "hiragana": "はまの",
+      "romaji": "hamano",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 48.3,
+          "minutes": 54
+        }
+      ]
+    },
+    {
+      "name": "八幡宿",
+      "hiragana": "やわたじゅく",
+      "romaji": "yawatajuku",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 53.1,
+          "minutes": 59
+        }
+      ]
+    },
+    {
+      "name": "五井",
+      "hiragana": "ごい",
+      "romaji": "goi",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 56.8,
+          "minutes": 63
+        }
+      ]
+    },
+    {
+      "name": "姉ヶ崎",
+      "hiragana": "あねがさき",
+      "romaji": "anegasaki",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 61.2,
+          "minutes": 68
+        }
+      ]
+    },
+    {
+      "name": "長浦",
+      "hiragana": "ながうら",
+      "romaji": "nagaura",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 65.3,
+          "minutes": 72
+        }
+      ]
+    },
+    {
+      "name": "袖ヶ浦",
+      "hiragana": "そでがうら",
+      "romaji": "sodegaura",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 69.8,
+          "minutes": 77
+        }
+      ]
+    },
+    {
+      "name": "木更津",
+      "hiragana": "きさらづ",
+      "romaji": "kisarazu",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 74.5,
+          "minutes": 82
+        }
+      ]
+    },
+    {
+      "name": "君津",
+      "hiragana": "きみつ",
+      "romaji": "kimitsu",
+      "lines": [
+        {
+          "route": "sobu-rapid",
+          "km": 82.8,
+          "minutes": 90
+        }
       ]
     }
   ]

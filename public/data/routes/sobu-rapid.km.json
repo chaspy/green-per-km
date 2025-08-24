@@ -1,0 +1,32 @@
+{
+  "route": "sobu-rapid",
+  "titleJa": "総武線快速（東京〜君津）",
+  "unit": "km_from_tokyo",
+  "stations": [
+    { "name": "東京", "hiragana": "とうきょう", "romaji": "tokyo", "km": 0.0, "minutes": 0 },
+    { "name": "新日本橋", "hiragana": "しんにほんばし", "romaji": "shinnihombashi", "km": 1.3, "minutes": 2 },
+    { "name": "馬喰町", "hiragana": "ばくろちょう", "romaji": "bakuro-yokoyama", "km": 2.8, "minutes": 4 },
+    { "name": "錦糸町", "hiragana": "きんしちょう", "romaji": "kinshicho", "km": 6.8, "minutes": 8 },
+    { "name": "新小岩", "hiragana": "しんこいわ", "romaji": "shinkoiwa", "km": 13.2, "minutes": 15 },
+    { "name": "市川", "hiragana": "いちかわ", "romaji": "ichikawa", "km": 17.5, "minutes": 20 },
+    { "name": "船橋", "hiragana": "ふなばし", "romaji": "funabashi", "km": 24.2, "minutes": 28 },
+    { "name": "津田沼", "hiragana": "つだぬま", "romaji": "tsudanuma", "km": 29.1, "minutes": 33 },
+    { "name": "稲毛", "hiragana": "いなげ", "romaji": "inage", "km": 35.6, "minutes": 40 },
+    { "name": "千葉", "hiragana": "ちば", "romaji": "chiba", "km": 39.2, "minutes": 44 },
+    { "name": "本千葉", "hiragana": "ほんちば", "romaji": "honchiba", "km": 42.1, "minutes": 47 },
+    { "name": "蘇我", "hiragana": "そが", "romaji": "soga", "km": 43.8, "minutes": 49 },
+    { "name": "浜野", "hiragana": "はまの", "romaji": "hamano", "km": 48.3, "minutes": 54 },
+    { "name": "八幡宿", "hiragana": "やわたじゅく", "romaji": "yawatajuku", "km": 53.1, "minutes": 59 },
+    { "name": "五井", "hiragana": "ごい", "romaji": "goi", "km": 56.8, "minutes": 63 },
+    { "name": "姉ヶ崎", "hiragana": "あねがさき", "romaji": "anegasaki", "km": 61.2, "minutes": 68 },
+    { "name": "長浦", "hiragana": "ながうら", "romaji": "nagaura", "km": 65.3, "minutes": 72 },
+    { "name": "袖ヶ浦", "hiragana": "そでがうら", "romaji": "sodegaura", "km": 69.8, "minutes": 77 },
+    { "name": "木更津", "hiragana": "きさらづ", "romaji": "kisarazu", "km": 74.5, "minutes": 82 },
+    { "name": "君津", "hiragana": "きみつ", "romaji": "kimitsu", "km": 82.8, "minutes": 90 }
+  ],
+  "notes": {
+    "dataSource": "推定値（JR東日本公式データおよび時刻表から算出）",
+    "greenCarService": "全区間でグリーン車サービスあり",
+    "lastUpdated": "2025-08-24"
+  }
+}
