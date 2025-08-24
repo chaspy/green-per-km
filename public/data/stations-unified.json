@@ -1,0 +1,334 @@
+{
+  "lastUpdated": "2025-08-24T00:00:00Z",
+  "stations": [
+    {
+      "name": "東京",
+      "hiragana": "とうきょう", 
+      "romaji": "tokyo",
+      "lines": [
+        { "route": "chuo-rapid", "km": 0.0, "minutes": 0 },
+        { "route": "utsunomiya-line", "km": 0.0, "minutes": 0 }
+      ]
+    },
+    {
+      "name": "神田",
+      "hiragana": "かんだ",
+      "romaji": "kanda", 
+      "lines": [
+        { "route": "chuo-rapid", "km": 1.3, "minutes": 2 }
+      ]
+    },
+    {
+      "name": "御茶ノ水",
+      "hiragana": "おちゃのみず",
+      "romaji": "ochanomizu",
+      "lines": [
+        { "route": "chuo-rapid", "km": 2.6, "minutes": 4 }
+      ]
+    },
+    {
+      "name": "四ツ谷",
+      "hiragana": "よつや",
+      "romaji": "yotsuya",
+      "lines": [
+        { "route": "chuo-rapid", "km": 6.6, "minutes": 8 }
+      ]
+    },
+    {
+      "name": "新宿",
+      "hiragana": "しんじゅく",
+      "romaji": "shinjuku",
+      "lines": [
+        { "route": "chuo-rapid", "km": 10.3, "minutes": 14 }
+      ]
+    },
+    {
+      "name": "中野",
+      "hiragana": "なかの",
+      "romaji": "nakano", 
+      "lines": [
+        { "route": "chuo-rapid", "km": 14.7, "minutes": 19 }
+      ]
+    },
+    {
+      "name": "高円寺",
+      "hiragana": "こうえんじ",
+      "romaji": "koenji",
+      "lines": [
+        { "route": "chuo-rapid", "km": 16.5, "minutes": 22 }
+      ]
+    },
+    {
+      "name": "阿佐ヶ谷",
+      "hiragana": "あさがや",
+      "romaji": "asagaya",
+      "lines": [
+        { "route": "chuo-rapid", "km": 17.8, "minutes": 24 }
+      ]
+    },
+    {
+      "name": "荻窪",
+      "hiragana": "おぎくぼ",
+      "romaji": "ogikubo",
+      "lines": [
+        { "route": "chuo-rapid", "km": 19.5, "minutes": 26 }
+      ]
+    },
+    {
+      "name": "西荻窪",
+      "hiragana": "にしおぎくぼ",
+      "romaji": "nishiogikubo",
+      "lines": [
+        { "route": "chuo-rapid", "km": 21.1, "minutes": 28 }
+      ]
+    },
+    {
+      "name": "吉祥寺",
+      "hiragana": "きちじょうじ",
+      "romaji": "kichijoji",
+      "lines": [
+        { "route": "chuo-rapid", "km": 22.8, "minutes": 30 }
+      ]
+    },
+    {
+      "name": "三鷹",
+      "hiragana": "みたか",
+      "romaji": "mitaka",
+      "lines": [
+        { "route": "chuo-rapid", "km": 25.3, "minutes": 33 }
+      ]
+    },
+    {
+      "name": "武蔵境",
+      "hiragana": "むさしさかい",
+      "romaji": "musashisakai",
+      "lines": [
+        { "route": "chuo-rapid", "km": 27.1, "minutes": 36 }
+      ]
+    },
+    {
+      "name": "東小金井",
+      "hiragana": "ひがしこがねい",
+      "romaji": "higashikoganei",
+      "lines": [
+        { "route": "chuo-rapid", "km": 28.6, "minutes": 38 }
+      ]
+    },
+    {
+      "name": "武蔵小金井",
+      "hiragana": "むさしこがねい",
+      "romaji": "musashikoganei",
+      "lines": [
+        { "route": "chuo-rapid", "km": 30.3, "minutes": 40 }
+      ]
+    },
+    {
+      "name": "国分寺",
+      "hiragana": "こくぶんじ",
+      "romaji": "kokubunji",
+      "lines": [
+        { "route": "chuo-rapid", "km": 33.0, "minutes": 43 }
+      ]
+    },
+    {
+      "name": "西国分寺",
+      "hiragana": "にしこくぶんじ",
+      "romaji": "nishikokubunji",
+      "lines": [
+        { "route": "chuo-rapid", "km": 34.8, "minutes": 45 }
+      ]
+    },
+    {
+      "name": "国立",
+      "hiragana": "くにたち",
+      "romaji": "kunitachi",
+      "lines": [
+        { "route": "chuo-rapid", "km": 37.1, "minutes": 48 }
+      ]
+    },
+    {
+      "name": "立川",
+      "hiragana": "たちかわ",
+      "romaji": "tachikawa",
+      "lines": [
+        { "route": "chuo-rapid", "km": 40.7, "minutes": 51 }
+      ]
+    },
+    {
+      "name": "日野",
+      "hiragana": "ひの",
+      "romaji": "hino",
+      "lines": [
+        { "route": "chuo-rapid", "km": 44.0, "minutes": 55 }
+      ]
+    },
+    {
+      "name": "豊田",
+      "hiragana": "とよだ",
+      "romaji": "toyoda",
+      "lines": [
+        { "route": "chuo-rapid", "km": 46.7, "minutes": 58 }
+      ]
+    },
+    {
+      "name": "八王子",
+      "hiragana": "はちおうじ",
+      "romaji": "hachioji",
+      "lines": [
+        { "route": "chuo-rapid", "km": 50.8, "minutes": 62 }
+      ]
+    },
+    {
+      "name": "西八王子",
+      "hiragana": "にしはちおうじ",
+      "romaji": "nishihachioji",
+      "lines": [
+        { "route": "chuo-rapid", "km": 52.3, "minutes": 64 }
+      ]
+    },
+    {
+      "name": "高尾",
+      "hiragana": "たかお",
+      "romaji": "takao",
+      "lines": [
+        { "route": "chuo-rapid", "km": 53.1, "minutes": 67 }
+      ]
+    },
+    {
+      "name": "上野",
+      "hiragana": "うえの",
+      "romaji": "ueno",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 3.6, "minutes": 6 }
+      ]
+    },
+    {
+      "name": "赤羽",
+      "hiragana": "あかばね",
+      "romaji": "akabane",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 7.8, "minutes": 12 }
+      ]
+    },
+    {
+      "name": "浦和",
+      "hiragana": "うらわ",
+      "romaji": "urawa",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 16.3, "minutes": 25 }
+      ]
+    },
+    {
+      "name": "大宮",
+      "hiragana": "おおみや",
+      "romaji": "omiya",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 21.7, "minutes": 32 }
+      ]
+    },
+    {
+      "name": "蓮田",
+      "hiragana": "はすだ",
+      "romaji": "hasuda",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 30.7, "minutes": 42 }
+      ]
+    },
+    {
+      "name": "白岡",
+      "hiragana": "しらおか",
+      "romaji": "shiraoka",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 35.3, "minutes": 47 }
+      ]
+    },
+    {
+      "name": "久喜",
+      "hiragana": "くき",
+      "romaji": "kuki",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 42.9, "minutes": 55 }
+      ]
+    },
+    {
+      "name": "栗橋",
+      "hiragana": "くりはし",
+      "romaji": "kurihashi",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 52.7, "minutes": 65 }
+      ]
+    },
+    {
+      "name": "古河",
+      "hiragana": "こが",
+      "romaji": "koga",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 59.9, "minutes": 72 }
+      ]
+    },
+    {
+      "name": "野木",
+      "hiragana": "のぎ",
+      "romaji": "nogi",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 65.4, "minutes": 78 }
+      ]
+    },
+    {
+      "name": "間々田",
+      "hiragana": "ままだ",
+      "romaji": "mamada",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 70.1, "minutes": 83 }
+      ]
+    },
+    {
+      "name": "小山",
+      "hiragana": "おやま",
+      "romaji": "oyama",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 73.5, "minutes": 87 }
+      ]
+    },
+    {
+      "name": "小金井",
+      "hiragana": "こがねい",
+      "romaji": "koganei-uts",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 80.8, "minutes": 95 }
+      ]
+    },
+    {
+      "name": "自治医大",
+      "hiragana": "じちいだい",
+      "romaji": "jichiidai",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 86.1, "minutes": 101 }
+      ]
+    },
+    {
+      "name": "石橋",
+      "hiragana": "いしばし",
+      "romaji": "ishibashi",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 93.4, "minutes": 108 }
+      ]
+    },
+    {
+      "name": "雀宮",
+      "hiragana": "すずめのみや",
+      "romaji": "suzumenomiya",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 103.2, "minutes": 118 }
+      ]
+    },
+    {
+      "name": "宇都宮",
+      "hiragana": "うつのみや",
+      "romaji": "utsunomiya",
+      "lines": [
+        { "route": "utsunomiya-line", "km": 109.5, "minutes": 125 }
+      ]
+    }
+  ]
+}

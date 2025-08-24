@@ -1,17 +1,16 @@
 import { useState, useEffect, useMemo } from 'react';
 import { calcGreenFare, unitPriceYenPerKm, unitPriceYenPerMinute } from './lib/fare';
-import { segmentKm, segmentMinutes, Station } from './lib/distance';
+import { 
+  segmentKmForRoute, 
+  segmentMinutesForRoute, 
+  UnifiedStation, 
+  UnifiedStationData, 
+  findCommonRoutes,
+  getCompatibleStations
+} from './lib/distance';
 import { StationSearch } from './components/StationSearch';
-import { generateRankings, generateMinuteRankings } from './lib/ranking';
+import { generateUnifiedRankings, generateUnifiedMinuteRankings } from './lib/ranking';
 import './App.css';
-
-type RouteData = {
-  route: string;
-  titleJa: string;
-  unit: string;
-  stations: Station[];
-  sources: Array<{ note: string; url: string }>;
-};
 
 type FareTable = {
   source: string;
@@ -20,7 +19,7 @@ type FareTable = {
 };
 
 function App() {
-  const [routeData, setRouteData] = useState<RouteData | null>(null);
+  const [unifiedData, setUnifiedData] = useState<UnifiedStationData | null>(null);
   const [fareTable, setFareTable] = useState<FareTable | null>(null);
   const [fromStation, setFromStation] = useState<string>('');
   const [toStation, setToStation] = useState<string>('');
@@ -28,13 +27,13 @@ function App() {
 
   useEffect(() => {
     Promise.all([
-      fetch('/data/routes/chuo-rapid.km.json').then(res => res.json()),
+      fetch('/data/stations-unified.json').then(res => res.json()),
       fetch('/data/green-fare.table.json').then(res => res.json())
-    ]).then(([route, fare]) => {
-      setRouteData(route);
+    ]).then(([unified, fare]) => {
+      setUnifiedData(unified);
       setFareTable(fare);
-      setFromStation(route.stations[0].name);
-      setToStation(route.stations[route.stations.length - 1].name);
+      // デフォルトで東京駅から始まる
+      setFromStation('東京');
       setLoading(false);
     }).catch(error => {
       console.error('Failed to load data:', error);
@@ -42,32 +41,74 @@ function App() {
     });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (!routeData || !fareTable) return <div>Failed to load data</div>;
+  // From駅変更時にTo駅が互換性がない場合はクリア（常に実行）
+  useEffect(() => {
+    if (unifiedData && fromStation && toStation) {
+      const compatible = getCompatibleStations(unifiedData.stations, fromStation);
+      const isCompatible = compatible.some(station => station.name === toStation);
+      if (!isCompatible) {
+        setToStation('');
+      }
+    }
+  }, [fromStation, toStation, unifiedData]);
 
-  const distance = fromStation && toStation
-    ? segmentKm(routeData.stations, fromStation, toStation)
+  if (loading) return <div>Loading...</div>;
+  if (!unifiedData || !fareTable) return <div>Failed to load data</div>;
+
+  // 選択された駅間の共通路線を取得
+  const commonRoutes = fromStation && toStation
+    ? findCommonRoutes(unifiedData.stations, fromStation, toStation)
+    : [];
+
+  // デフォルトで最初の共通路線を使用
+  const selectedRoute = commonRoutes.length > 0 ? commonRoutes[0] : null;
+
+  // ランキング表示用：駅選択時は該当路線のみ、デフォルトは全路線
+  const rankingRoutes = fromStation && toStation && commonRoutes.length > 0 
+    ? commonRoutes 
+    : undefined;  // undefinedで全路線を表示
+
+  // To駅の選択肢をFrom駅と互換性のある駅に制限
+  const compatibleToStations = fromStation 
+    ? getCompatibleStations(unifiedData.stations, fromStation)
+    : undefined;
+
+  const distance = fromStation && toStation && selectedRoute
+    ? segmentKmForRoute(unifiedData.stations, fromStation, toStation, selectedRoute)
     : 0;
   
-  const minutes = fromStation && toStation
-    ? segmentMinutes(routeData.stations, fromStation, toStation)
+  const minutes = fromStation && toStation && selectedRoute
+    ? segmentMinutesForRoute(unifiedData.stations, fromStation, toStation, selectedRoute)
     : 0;
 
   const suicaFare = distance > 0 ? calcGreenFare(distance, fareTable, 'suica') : 0;
   const suicaUnit = distance > 0 ? unitPriceYenPerKm(distance, suicaFare) : 0;
   const minuteUnit = minutes > 0 ? unitPriceYenPerMinute(minutes, suicaFare) : 0;
 
+  // 路線名の表示用マッピング
+  const routeTitles: { [key: string]: string } = {
+    'chuo-rapid': '中央線快速（東京〜高尾）',
+    'utsunomiya-line': '宇都宮線（東京〜宇都宮）',
+  };
+
   return (
     <div className="container">
       <h1>グリーン料金計算機</h1>
-      <p className="subtitle">{routeData.titleJa}</p>
+      {selectedRoute && (
+        <p className="subtitle">
+          {routeTitles[selectedRoute] || selectedRoute}
+          {commonRoutes.length > 1 && (
+            <span className="route-info"> (他{commonRoutes.length - 1}路線対応)</span>
+          )}
+        </p>
+      )}
 
       <div className="form">
         <div className="form-group">
           <label>
             From:
             <StationSearch
-              stations={routeData.stations}
+              stations={unifiedData.stations}
               value={fromStation}
               onChange={setFromStation}
               placeholder="出発駅を検索（漢字/ひらがな/ローマ字）"
@@ -79,10 +120,11 @@ function App() {
           <label>
             To:
             <StationSearch
-              stations={routeData.stations}
+              stations={unifiedData.stations}
               value={toStation}
               onChange={setToStation}
               placeholder="到着駅を検索（漢字/ひらがな/ローマ字）"
+              filteredStations={compatibleToStations}
             />
           </label>
         </div>
@@ -122,8 +164,9 @@ function App() {
       )}
 
       <RankingSection 
-        stations={routeData.stations} 
+        unifiedStations={unifiedData.stations}
         fareTable={fareTable}
+        availableRoutes={rankingRoutes}
       />
 
       <footer className="footer">
@@ -137,38 +180,39 @@ function App() {
 
         <div className="footer-section">
           <h4>路線データの出典</h4>
-          <a href="https://ja.wikipedia.org/wiki/中央線快速" target="_blank" rel="noopener noreferrer">
-            Wikipedia - 中央線快速（総距離: 53.1km）
-          </a>
-          <p className="license-note">※ CC BY-SA ライセンスに基づく</p>
+          <p>JR東日本 グリーン車対応路線</p>
+          <p className="license-note">※ 公式時刻表および各種資料に基づく</p>
         </div>
 
         <div className="footer-section">
-          <h4>参考資料</h4>
-          {routeData.sources.map((source, idx) => (
-            <div key={idx}>
-              <a href={source.url} target="_blank" rel="noopener noreferrer">
-                {source.note}
-              </a>
-            </div>
-          ))}
+          <h4>データベース</h4>
+          <p>最終更新: {new Date(unifiedData.lastUpdated).toLocaleDateString('ja-JP')}</p>
+          <p>対応路線: {Object.values(routeTitles).join('、')}</p>
         </div>
       </footer>
     </div>
   );
 }
 
-function RankingSection({ stations, fareTable }: { stations: Station[], fareTable: FareTable }) {
+function RankingSection({ 
+  unifiedStations, 
+  fareTable, 
+  availableRoutes 
+}: { 
+  unifiedStations: UnifiedStation[], 
+  fareTable: FareTable,
+  availableRoutes?: string[]
+}) {
   const [filterStation, setFilterStation] = useState<string>('');
   
   const allRankings = useMemo(
-    () => generateRankings(stations, fareTable, 'suica'),
-    [stations, fareTable]
+    () => generateUnifiedRankings(unifiedStations, fareTable, 'suica', availableRoutes),
+    [unifiedStations, fareTable, availableRoutes]
   );
   
   const minuteRankings = useMemo(
-    () => generateMinuteRankings(stations, fareTable, 'suica'),
-    [stations, fareTable]
+    () => generateUnifiedMinuteRankings(unifiedStations, fareTable, 'suica', availableRoutes),
+    [unifiedStations, fareTable, availableRoutes]
   );
   
   // フィルタリング
@@ -232,7 +276,7 @@ function RankingSection({ stations, fareTable }: { stations: Station[], fareTabl
           <label className="filter-label">
             🔍 起点駅でフィルタ:
             <StationSearch
-              stations={stations}
+              stations={unifiedStations}
               value={filterStation}
               onChange={setFilterStation}
               placeholder="フィルタする駅を選択（空白で全表示）"

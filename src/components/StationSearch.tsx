@@ -1,24 +1,28 @@
 import { useState, useRef, useEffect } from 'react';
 import Fuse from 'fuse.js';
-import { Station } from '../lib/distance';
+import { UnifiedStation } from '../lib/distance';
 import './StationSearch.css';
 
 interface StationSearchProps {
-  stations: Station[];
+  stations: UnifiedStation[];
   value: string;
   onChange: (stationName: string) => void;
   placeholder?: string;
+  filteredStations?: UnifiedStation[]; // 選択可能な駅を制限
 }
 
-export function StationSearch({ stations, value, onChange, placeholder = '駅名を検索...' }: StationSearchProps) {
+export function StationSearch({ stations, value, onChange, placeholder = '駅名を検索...', filteredStations }: StationSearchProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  // 表示用の駅リスト（フィルタがある場合はそれを使用）
+  const availableStations = filteredStations || stations;
+
   // Fuse.js の設定
-  const fuse = new Fuse(stations, {
+  const fuse = new Fuse(availableStations, {
     keys: ['name', 'hiragana', 'romaji'],
     threshold: 0.3,
     includeScore: true,
@@ -28,7 +32,7 @@ export function StationSearch({ stations, value, onChange, placeholder = '駅名
   // 検索結果
   const results = searchTerm 
     ? fuse.search(searchTerm).map(result => result.item)
-    : stations;
+    : availableStations;
 
   // 外側クリックで閉じる
   useEffect(() => {
@@ -59,7 +63,7 @@ export function StationSearch({ stations, value, onChange, placeholder = '駅名
     }
   };
 
-  const selectStation = (station: Station) => {
+  const selectStation = (station: UnifiedStation) => {
     onChange(station.name);
     setSearchTerm('');
     setIsOpen(false);
