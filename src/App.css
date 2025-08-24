@@ -11,6 +11,14 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.supported-routes {
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 1rem 0;
+  font-style: italic;
+}
+
 .subtitle {
   text-align: center;
   color: #666;

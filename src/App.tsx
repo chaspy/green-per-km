@@ -89,11 +89,15 @@ function App() {
   const routeTitles: { [key: string]: string } = {
     'chuo-rapid': '中央線快速（東京〜高尾）',
     'utsunomiya-line': '宇都宮線（東京〜宇都宮）',
+    'tokaido-line': '東海道線（東京〜熱海）',
   };
 
   return (
     <div className="container">
       <h1>グリーン料金計算機</h1>
+      <p className="supported-routes">
+        対応路線: {Object.values(routeTitles).join('、')}
+      </p>
       {selectedRoute && (
         <p className="subtitle">
           {routeTitles[selectedRoute] || selectedRoute}

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-08-24T00:00:00Z",
+  "lastUpdated": "2025-08-24T04:00:00Z",
   "stations": [
     {
       "name": "東京",
@@ -7,7 +7,8 @@
       "romaji": "tokyo",
       "lines": [
         { "route": "chuo-rapid", "km": 0.0, "minutes": 0 },
-        { "route": "utsunomiya-line", "km": 0.0, "minutes": 0 }
+        { "route": "utsunomiya-line", "km": 0.0, "minutes": 0 },
+        { "route": "tokaido-line", "km": 0.0, "minutes": 0 }
       ]
     },
     {
@@ -328,6 +329,166 @@
       "romaji": "utsunomiya",
       "lines": [
         { "route": "utsunomiya-line", "km": 109.5, "minutes": 125 }
+      ]
+    },
+    {
+      "name": "新橋",
+      "hiragana": "しんばし",
+      "romaji": "shimbashi",
+      "lines": [
+        { "route": "tokaido-line", "km": 2.2, "minutes": 4 }
+      ]
+    },
+    {
+      "name": "品川",
+      "hiragana": "しながわ",
+      "romaji": "shinagawa",
+      "lines": [
+        { "route": "tokaido-line", "km": 6.8, "minutes": 10 }
+      ]
+    },
+    {
+      "name": "川崎",
+      "hiragana": "かわさき",
+      "romaji": "kawasaki",
+      "lines": [
+        { "route": "tokaido-line", "km": 18.2, "minutes": 18 }
+      ]
+    },
+    {
+      "name": "横浜",
+      "hiragana": "よこはま",
+      "romaji": "yokohama",
+      "lines": [
+        { "route": "tokaido-line", "km": 28.8, "minutes": 28 }
+      ]
+    },
+    {
+      "name": "戸塚",
+      "hiragana": "とつか",
+      "romaji": "totsuka",
+      "lines": [
+        { "route": "tokaido-line", "km": 38.7, "minutes": 34 }
+      ]
+    },
+    {
+      "name": "大船",
+      "hiragana": "おおふな",
+      "romaji": "ofuna",
+      "lines": [
+        { "route": "tokaido-line", "km": 45.1, "minutes": 38 }
+      ]
+    },
+    {
+      "name": "藤沢",
+      "hiragana": "ふじさわ",
+      "romaji": "fujisawa",
+      "lines": [
+        { "route": "tokaido-line", "km": 50.5, "minutes": 42 }
+      ]
+    },
+    {
+      "name": "辻堂",
+      "hiragana": "つじどう",
+      "romaji": "tsujido",
+      "lines": [
+        { "route": "tokaido-line", "km": 53.7, "minutes": 45 }
+      ]
+    },
+    {
+      "name": "茅ヶ崎",
+      "hiragana": "ちがさき",
+      "romaji": "chigasaki",
+      "lines": [
+        { "route": "tokaido-line", "km": 56.8, "minutes": 48 }
+      ]
+    },
+    {
+      "name": "平塚",
+      "hiragana": "ひらつか",
+      "romaji": "hiratsuka",
+      "lines": [
+        { "route": "tokaido-line", "km": 63.2, "minutes": 54 }
+      ]
+    },
+    {
+      "name": "大磯",
+      "hiragana": "おおいそ",
+      "romaji": "oiso",
+      "lines": [
+        { "route": "tokaido-line", "km": 67.3, "minutes": 58 }
+      ]
+    },
+    {
+      "name": "二宮",
+      "hiragana": "にのみや",
+      "romaji": "ninomiya",
+      "lines": [
+        { "route": "tokaido-line", "km": 70.9, "minutes": 61 }
+      ]
+    },
+    {
+      "name": "国府津",
+      "hiragana": "こうづ",
+      "romaji": "kozu",
+      "lines": [
+        { "route": "tokaido-line", "km": 74.7, "minutes": 65 }
+      ]
+    },
+    {
+      "name": "鴨宮",
+      "hiragana": "かものみや",
+      "romaji": "kamonomiya",
+      "lines": [
+        { "route": "tokaido-line", "km": 78.4, "minutes": 69 }
+      ]
+    },
+    {
+      "name": "小田原",
+      "hiragana": "おだわら",
+      "romaji": "odawara",
+      "lines": [
+        { "route": "tokaido-line", "km": 83.9, "minutes": 77 }
+      ]
+    },
+    {
+      "name": "早川",
+      "hiragana": "はやかわ",
+      "romaji": "hayakawa",
+      "lines": [
+        { "route": "tokaido-line", "km": 87.1, "minutes": 81 }
+      ]
+    },
+    {
+      "name": "根府川",
+      "hiragana": "ねぶかわ",
+      "romaji": "nebukawa",
+      "lines": [
+        { "route": "tokaido-line", "km": 90.4, "minutes": 85 }
+      ]
+    },
+    {
+      "name": "真鶴",
+      "hiragana": "まなづる",
+      "romaji": "manazuru",
+      "lines": [
+        { "route": "tokaido-line", "km": 95.4, "minutes": 90 }
+      ]
+    },
+    {
+      "name": "湯河原",
+      "hiragana": "ゆがわら",
+      "romaji": "yugawara",
+      "lines": [
+        { "route": "tokaido-line", "km": 100.7, "minutes": 95 }
+      ]
+    },
+    {
+      "name": "熱海",
+      "hiragana": "あたみ",
+      "romaji": "atami",
+      "lines": [
+        { "route": "tokaido-line", "km": 104.6, "minutes": 98 }
       ]
     }
   ]

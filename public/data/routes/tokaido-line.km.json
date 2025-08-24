@@ -1,0 +1,32 @@
+{
+  "route": "tokaido-line",
+  "titleJa": "東海道線（東京〜熱海）",
+  "unit": "km_from_tokyo",
+  "stations": [
+    { "name": "東京", "hiragana": "とうきょう", "romaji": "tokyo", "km": 0.0, "minutes": 0 },
+    { "name": "新橋", "hiragana": "しんばし", "romaji": "shimbashi", "km": 2.2, "minutes": 4 },
+    { "name": "品川", "hiragana": "しながわ", "romaji": "shinagawa", "km": 6.8, "minutes": 10 },
+    { "name": "川崎", "hiragana": "かわさき", "romaji": "kawasaki", "km": 18.2, "minutes": 18 },
+    { "name": "横浜", "hiragana": "よこはま", "romaji": "yokohama", "km": 28.8, "minutes": 28 },
+    { "name": "戸塚", "hiragana": "とつか", "romaji": "totsuka", "km": 38.7, "minutes": 34 },
+    { "name": "大船", "hiragana": "おおふな", "romaji": "ofuna", "km": 45.1, "minutes": 38 },
+    { "name": "藤沢", "hiragana": "ふじさわ", "romaji": "fujisawa", "km": 50.5, "minutes": 42 },
+    { "name": "辻堂", "hiragana": "つじどう", "romaji": "tsujido", "km": 53.7, "minutes": 45 },
+    { "name": "茅ヶ崎", "hiragana": "ちがさき", "romaji": "chigasaki", "km": 56.8, "minutes": 48 },
+    { "name": "平塚", "hiragana": "ひらつか", "romaji": "hiratsuka", "km": 63.2, "minutes": 54 },
+    { "name": "大磯", "hiragana": "おおいそ", "romaji": "oiso", "km": 67.3, "minutes": 58 },
+    { "name": "二宮", "hiragana": "にのみや", "romaji": "ninomiya", "km": 70.9, "minutes": 61 },
+    { "name": "国府津", "hiragana": "こうづ", "romaji": "kozu", "km": 74.7, "minutes": 65 },
+    { "name": "鴨宮", "hiragana": "かものみや", "romaji": "kamonomiya", "km": 78.4, "minutes": 69 },
+    { "name": "小田原", "hiragana": "おだわら", "romaji": "odawara", "km": 83.9, "minutes": 77 },
+    { "name": "早川", "hiragana": "はやかわ", "romaji": "hayakawa", "km": 87.1, "minutes": 81 },
+    { "name": "根府川", "hiragana": "ねぶかわ", "romaji": "nebukawa", "km": 90.4, "minutes": 85 },
+    { "name": "真鶴", "hiragana": "まなづる", "romaji": "manazuru", "km": 95.4, "minutes": 90 },
+    { "name": "湯河原", "hiragana": "ゆがわら", "romaji": "yugawara", "km": 100.7, "minutes": 95 },
+    { "name": "熱海", "hiragana": "あたみ", "romaji": "atami", "km": 104.6, "minutes": 98 }
+  ],
+  "sources": [
+    {"note":"JR東日本公式 - 普通列車グリーン車対象駅","url":"https://www.jreast.co.jp/railway/train/green/"},
+    {"note":"営業キロ・所要時間は概算値です。正確な情報は時刻表をご確認ください","url":"#"}
+  ]
+}
