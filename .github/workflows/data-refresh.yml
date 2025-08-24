@@ -1,0 +1,41 @@
+name: data-refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    # JST 09:00 に相当する UTC 0:00（GHA cronはUTC）
+    - cron: '0 0 * * *'
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # GITHUB_TOKENでコミット/PR可
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Scrape green fare table
+        run: node scripts/scrape-green-fare.mjs
+        continue-on-error: true
+      
+      - name: Verify Chuo rapid total distance
+        run: node scripts/verify-chuo-rapid.mjs
+      
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(data): refresh green fare & verify km [skip ci]"
+            git push
+          else
+            echo "No changes detected"
+          fi

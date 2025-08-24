@@ -1,0 +1,106 @@
+.station-search {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.station-search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.station-search-input:focus {
+  border-color: #0f7938;
+  box-shadow: 0 0 0 3px rgba(15, 121, 56, 0.1);
+}
+
+.selected-station {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #f0f9f4;
+  border-radius: 6px;
+  color: #0f7938;
+  font-weight: 600;
+  text-align: center;
+}
+
+.station-search-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.station-search-item {
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.1s;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.station-search-item:last-child {
+  border-bottom: none;
+}
+
+.station-search-item:hover,
+.station-search-item.highlighted {
+  background-color: #f9f9f9;
+}
+
+.station-search-item.highlighted {
+  background-color: #f0f9f4;
+}
+
+.station-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.station-reading {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* スクロールバーのスタイリング */
+.station-search-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.station-search-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.station-search-dropdown::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.station-search-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* モバイル対応 */
+@media (max-width: 640px) {
+  .station-search {
+    max-width: 100%;
+  }
+  
+  .station-search-dropdown {
+    max-height: 40vh;
+  }
+}

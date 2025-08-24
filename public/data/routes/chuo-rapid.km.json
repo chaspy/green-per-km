@@ -1,0 +1,36 @@
+{
+  "route": "chuo-rapid",
+  "titleJa": "中央線快速（東京〜高尾）",
+  "unit": "km_from_tokyo",
+  "stations": [
+    { "name": "東京", "hiragana": "とうきょう", "romaji": "tokyo", "km": 0.0, "minutes": 0 },
+    { "name": "神田", "hiragana": "かんだ", "romaji": "kanda", "km": 1.3, "minutes": 2 },
+    { "name": "御茶ノ水", "hiragana": "おちゃのみず", "romaji": "ochanomizu", "km": 2.6, "minutes": 4 },
+    { "name": "四ツ谷", "hiragana": "よつや", "romaji": "yotsuya", "km": 6.6, "minutes": 8 },
+    { "name": "新宿", "hiragana": "しんじゅく", "romaji": "shinjuku", "km": 10.3, "minutes": 14 },
+    { "name": "中野", "hiragana": "なかの", "romaji": "nakano", "km": 14.7, "minutes": 19 },
+    { "name": "高円寺", "hiragana": "こうえんじ", "romaji": "koenji", "km": 16.5, "minutes": 22 },
+    { "name": "阿佐ヶ谷", "hiragana": "あさがや", "romaji": "asagaya", "km": 17.8, "minutes": 24 },
+    { "name": "荻窪", "hiragana": "おぎくぼ", "romaji": "ogikubo", "km": 19.5, "minutes": 26 },
+    { "name": "西荻窪", "hiragana": "にしおぎくぼ", "romaji": "nishiogikubo", "km": 21.1, "minutes": 28 },
+    { "name": "吉祥寺", "hiragana": "きちじょうじ", "romaji": "kichijoji", "km": 22.8, "minutes": 30 },
+    { "name": "三鷹", "hiragana": "みたか", "romaji": "mitaka", "km": 25.3, "minutes": 33 },
+    { "name": "武蔵境", "hiragana": "むさしさかい", "romaji": "musashisakai", "km": 27.1, "minutes": 36 },
+    { "name": "東小金井", "hiragana": "ひがしこがねい", "romaji": "higashikoganei", "km": 28.6, "minutes": 38 },
+    { "name": "武蔵小金井", "hiragana": "むさしこがねい", "romaji": "musashikoganei", "km": 30.3, "minutes": 40 },
+    { "name": "国分寺", "hiragana": "こくぶんじ", "romaji": "kokubunji", "km": 33.0, "minutes": 43 },
+    { "name": "西国分寺", "hiragana": "にしこくぶんじ", "romaji": "nishikokubunji", "km": 34.8, "minutes": 45 },
+    { "name": "国立", "hiragana": "くにたち", "romaji": "kunitachi", "km": 37.1, "minutes": 48 },
+    { "name": "立川", "hiragana": "たちかわ", "romaji": "tachikawa", "km": 40.7, "minutes": 51 },
+    { "name": "日野", "hiragana": "ひの", "romaji": "hino", "km": 44.0, "minutes": 55 },
+    { "name": "豊田", "hiragana": "とよだ", "romaji": "toyoda", "km": 46.7, "minutes": 58 },
+    { "name": "八王子", "hiragana": "はちおうじ", "romaji": "hachioji", "km": 50.8, "minutes": 62 },
+    { "name": "西八王子", "hiragana": "にしはちおうじ", "romaji": "nishihachioji", "km": 52.3, "minutes": 64 },
+    { "name": "高尾", "hiragana": "たかお", "romaji": "takao", "km": 53.1, "minutes": 67 }
+  ],
+  "sources": [
+    {"note":"駅間距離一覧の参考（検証用）","url":"https://dash-dash-dash.jp/archives/58434.html"},
+    {"note":"駅別『起点から』距離の参考（検証用）","url":"https://www.mds.gr.jp/~jp3nfp/station/list/jr/chuou.html"},
+    {"note":"所要時間は概算値です。正確な時刻は時刻表をご確認ください","url":"#"}
+  ]
+}

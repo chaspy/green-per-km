@@ -1,0 +1,9 @@
+{
+  "source": "https://www.jreast.co.jp/railway/train/green/charge/",
+  "updatedAt": "2025-08-23T00:00:00Z",
+  "fareBands": [
+    { "maxKm": 50,  "suica": 750,  "ticket": 1010 },
+    { "maxKm": 100, "suica": 1000, "ticket": 1260 },
+    { "maxKm": null, "suica": 1550, "ticket": 1810 }
+  ]
+}
