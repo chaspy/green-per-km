@@ -1,0 +1,38 @@
+{
+  "route": "takasaki-line",
+  "titleJa": "高崎線（東京〜高崎）",
+  "unit": "km_from_tokyo",
+  "stations": [
+    { "name": "東京", "hiragana": "とうきょう", "romaji": "tokyo", "km": 0.0, "minutes": 0 },
+    { "name": "上野", "hiragana": "うえの", "romaji": "ueno", "km": 3.6, "minutes": 4 },
+    { "name": "尾久", "hiragana": "おく", "romaji": "oku", "km": 8.4, "minutes": 9 },
+    { "name": "赤羽", "hiragana": "あかばね", "romaji": "akabane", "km": 13.2, "minutes": 15 },
+    { "name": "浦和", "hiragana": "うらわ", "romaji": "urawa", "km": 24.2, "minutes": 26 },
+    { "name": "さいたま新都心", "hiragana": "さいたましんとしん", "romaji": "saitama-shintoshin", "km": 28.7, "minutes": 30 },
+    { "name": "大宮", "hiragana": "おおみや", "romaji": "omiya", "km": 30.3, "minutes": 32 },
+    { "name": "宮原", "hiragana": "みやはら", "romaji": "miyahara", "km": 34.3, "minutes": 37 },
+    { "name": "上尾", "hiragana": "あげお", "romaji": "ageo", "km": 38.5, "minutes": 42 },
+    { "name": "北上尾", "hiragana": "きたあげお", "romaji": "kita-ageo", "km": 40.2, "minutes": 44 },
+    { "name": "桶川", "hiragana": "おけがわ", "romaji": "okegawa", "km": 42.1, "minutes": 46 },
+    { "name": "北本", "hiragana": "きたもと", "romaji": "kitamoto", "km": 46.7, "minutes": 51 },
+    { "name": "鴻巣", "hiragana": "こうのす", "romaji": "konosu", "km": 50.3, "minutes": 55 },
+    { "name": "北鴻巣", "hiragana": "きたこうのす", "romaji": "kita-konosu", "km": 54.6, "minutes": 59 },
+    { "name": "吹上", "hiragana": "ふきあげ", "romaji": "fukiage", "km": 57.6, "minutes": 62 },
+    { "name": "行田", "hiragana": "ぎょうだ", "romaji": "gyoda", "km": 59.9, "minutes": 65 },
+    { "name": "熊谷", "hiragana": "くまがや", "romaji": "kumagaya", "km": 64.7, "minutes": 70 },
+    { "name": "籠原", "hiragana": "かごはら", "romaji": "kagohara", "km": 76.3, "minutes": 83 },
+    { "name": "深谷", "hiragana": "ふかや", "romaji": "fukaya", "km": 80.6, "minutes": 87 },
+    { "name": "岡部", "hiragana": "おかべ", "romaji": "okabe", "km": 86.2, "minutes": 93 },
+    { "name": "本庄", "hiragana": "ほんじょう", "romaji": "honjo", "km": 89.5, "minutes": 97 },
+    { "name": "神保原", "hiragana": "じんぼはら", "romaji": "jimbohara", "km": 94.7, "minutes": 103 },
+    { "name": "新町", "hiragana": "しんまち", "romaji": "shinmachi", "km": 100.8, "minutes": 109 },
+    { "name": "倉賀野", "hiragana": "くらがの", "romaji": "kuragano", "km": 103.2, "minutes": 112 },
+    { "name": "高崎", "hiragana": "たかさき", "romaji": "takasaki", "km": 105.2, "minutes": 114 }
+  ],
+  "sources": [
+    {"note":"ℹ️ このデータは編集・推定です。実際のグリーン車停車は時刻表でご確認ください","url":"#"},
+    {"note":"駅間距離参考: Wikipedia","url":"https://ja.wikipedia.org/wiki/高崎線"},
+    {"note":"高崎線時刻表（JR東日本）","url":"https://www.jreast-timetable.jp/timetable/list/0047.html"},
+    {"note":"デバッグ用: このJSONファイル（GitHub）","url":"https://github.com/chaspy/green-per-km/blob/main/public/data/routes/takasaki-line.km.json"}
+  ]
+}

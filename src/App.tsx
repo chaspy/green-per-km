@@ -91,6 +91,9 @@ function App() {
     'utsunomiya-line': '宇都宮線（東京〜宇都宮）',
     'tokaido-line': '東海道線（東京〜熱海）',
     'shonan-shinjuku-line': '湘南新宿ライン（宇都宮・高崎〜小田原・逗子）',
+    'takasaki-line': '高崎線（東京〜高崎）',
+    'joban-line': '常磐線（東京・上野〜水戸）',
+    'yokosuka-line': '横須賀線（東京〜久里浜）',
   };
 
   return (

@@ -1,0 +1,33 @@
+{
+  "route": "yokosuka-line",
+  "titleJa": "横須賀線（東京〜久里浜）",
+  "unit": "km_from_tokyo",
+  "stations": [
+    { "name": "東京", "hiragana": "とうきょう", "romaji": "tokyo", "km": 0.0, "minutes": 0 },
+    { "name": "新橋", "hiragana": "しんばし", "romaji": "shimbashi", "km": 2.2, "minutes": 4 },
+    { "name": "品川", "hiragana": "しながわ", "romaji": "shinagawa", "km": 6.8, "minutes": 10 },
+    { "name": "西大井", "hiragana": "にしおおい", "romaji": "nishioi", "km": 11.0, "minutes": 15 },
+    { "name": "武蔵小杉", "hiragana": "むさしこすぎ", "romaji": "musashikosugi", "km": 16.2, "minutes": 20 },
+    { "name": "新川崎", "hiragana": "しんかわさき", "romaji": "shinkawasaki", "km": 21.4, "minutes": 25 },
+    { "name": "横浜", "hiragana": "よこはま", "romaji": "yokohama", "km": 26.6, "minutes": 30 },
+    { "name": "保土ケ谷", "hiragana": "ほどがや", "romaji": "hodogaya", "km": 30.2, "minutes": 34 },
+    { "name": "東戸塚", "hiragana": "ひがしとつか", "romaji": "higashitotsuka", "km": 34.8, "minutes": 38 },
+    { "name": "戸塚", "hiragana": "とつか", "romaji": "totsuka", "km": 38.1, "minutes": 41 },
+    { "name": "大船", "hiragana": "おおふな", "romaji": "ofuna", "km": 44.3, "minutes": 47 },
+    { "name": "北鎌倉", "hiragana": "きたかまくら", "romaji": "kita-kamakura", "km": 47.8, "minutes": 52 },
+    { "name": "鎌倉", "hiragana": "かまくら", "romaji": "kamakura", "km": 50.1, "minutes": 55 },
+    { "name": "逗子", "hiragana": "ずし", "romaji": "zushi", "km": 53.7, "minutes": 60 },
+    { "name": "東逗子", "hiragana": "ひがしずし", "romaji": "higashi-zushi", "km": 55.9, "minutes": 62 },
+    { "name": "田浦", "hiragana": "たうら", "romaji": "taura", "km": 59.4, "minutes": 66 },
+    { "name": "横須賀", "hiragana": "よこすか", "romaji": "yokosuka", "km": 63.2, "minutes": 71 },
+    { "name": "衣笠", "hiragana": "きぬがさ", "romaji": "kinugasa", "km": 66.8, "minutes": 76 },
+    { "name": "久里浜", "hiragana": "くりはま", "romaji": "kurihama", "km": 73.3, "minutes": 85 }
+  ],
+  "sources": [
+    {"note":"ℹ️ このデータは編集・推定です。実際のグリーン車停車は時刻表でご確認ください","url":"#"},
+    {"note":"東京〜大船間は品鶴線・横須賀線経由のルート","url":"#"},
+    {"note":"駅間距離参考: Wikipedia","url":"https://ja.wikipedia.org/wiki/横須賀線"},
+    {"note":"横須賀線時刻表（JR東日本）","url":"https://www.jreast-timetable.jp/timetable/list/0006.html"},
+    {"note":"デバッグ用: このJSONファイル（GitHub）","url":"https://github.com/chaspy/green-per-km/blob/main/public/data/routes/yokosuka-line.km.json"}
+  ]
+}
